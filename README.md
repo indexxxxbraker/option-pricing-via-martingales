@@ -1,8 +1,8 @@
-# Pricing European Options via Martingales
+# From the Risk-Neutral Measure to Girsanov's Theorem in Stochastic Integration
 
-**From the binomial model to Girsanov's theorem and the Black-Scholes formula**
+**Pricing of Financial Products**
 
-Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science, September 2026.
+Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science. Deposit and defence expected in May 2027.
 
 [![PDF (English)](https://img.shields.io/badge/PDF-English-blue.svg)](en/thesis_en.pdf)
 [![PDF (Español)](https://img.shields.io/badge/PDF-Espa%C3%B1ol-blue.svg)](es/tfg_es.pdf)
@@ -10,7 +10,7 @@ Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science, S
 
 ## About this work
 
-This repository contains my *Trabajo de Fin de Grado* (bachelor's thesis) for the Degree in Mathematics at the University of Oviedo, written as part of the double degree in Mathematics and Physics and supervised by **José Santos Domínguez Menchero**. The thesis was written and defended in Spanish; an English version is provided so that the work is accessible to a wider audience (see the note on the translation below).
+This repository contains my *Trabajo de Fin de Grado* (bachelor's thesis) for the Degree in Mathematics at the University of Oviedo, written as part of the double degree in Mathematics and Physics and supervised by **José Santos Domínguez Menchero**. The thesis was written in Spanish and will be defended in Spanish; an English version is provided so that the work is accessible to a wider audience (see the note on the translation below).
 
 The thesis is a self-contained, rigorous development of the theory of European option pricing, from the one-period binary model up to the proof of the Black-Scholes formula, built entirely on the **martingale approach** rather than the classical PDE route. Its guiding thread is the correspondence between the discrete and the continuous settings: every tool of stochastic calculus introduced in the second half (Itô integral, Itô's formula, Girsanov's theorem, martingale representation) is presented as the continuous-time counterpart of an elementary object already met in the binomial model.
 
@@ -61,7 +61,7 @@ cd es && latexmk -pdf tfg_es.tex        # Spanish version
 
 ## On the English translation
 
-The thesis was written and defended in Spanish. The English version was produced by the author with the assistance of AI translation tools (Anthropic's Claude) and then revised in full by the author. The mathematical content, structure and numbering of results are identical in both versions; the Spanish text remains the reference version, and any remaining infelicities in the English are the author's responsibility.
+The thesis was written in Spanish and will be defended in Spanish. The English version was produced by the author with the assistance of AI translation tools (Anthropic's Claude) and then revised in full by the author. The mathematical content, structure and numbering of results are identical in both versions; the Spanish text remains the reference version, and any remaining infelicities in the English are the author's responsibility.
 
 ## Continuation of this work
 
