@@ -65,7 +65,7 @@ The thesis was written in Spanish and will be defended in Spanish. The English v
 
 ## Continuation of this work
 
-The natural next step after this thesis is to move from theory to numerical practice and beyond the Black-Scholes assumptions. That is the purpose of my companion repository [**quant-finance-portfolio**](https://github.com/indexxxxbraker/quant-finance-portfolio): a derivative pricing library implemented in parallel in Python and C++, covering analytical Black-Scholes pricing and Greeks, Monte Carlo methods with variance reduction and quasi-Monte Carlo, finite-difference PDE schemes and lattices, and the Heston stochastic volatility model with Fourier, Monte Carlo (Andersen QE) and ADI-PDE pricers, calibration, and exotic options — each method cross-validated against independent ones.
+The natural next step after this thesis is to move from theory to numerical practice and beyond the Black-Scholes assumptions. That is the purpose of my companion repository [**quant-finance-portfolio**](https://github.com/indexxxxbraker/quant-finance-portfolio): a derivative pricing library implemented in parallel in Python and C++, covering analytical Black-Scholes pricing and Greeks, Monte Carlo methods with variance reduction and quasi-Monte Carlo, finite-difference PDE schemes and lattices, and the Heston stochastic volatility model with Fourier, Monte Carlo (Andersen QE) and ADI-PDE pricers, calibration, and exotic options; each method cross-validated against independent ones.
 
 ## Main references
 
