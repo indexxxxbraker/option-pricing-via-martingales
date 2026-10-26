@@ -12,7 +12,7 @@ Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science. D
 
 This repository contains my *Trabajo de Fin de Grado* (bachelor's thesis) for the Degree in Mathematics at the University of Oviedo, written as part of the double degree in Mathematics and Physics and supervised by **José Santos Domínguez Menchero**. The thesis was written in Spanish and will be defended in Spanish; an English version is provided so that the work is accessible to a wider audience (see the note on the translation below).
 
-The thesis is a self-contained, rigorous development of the theory of European option pricing, from the one-period binary model up to the proof of the Black-Scholes formula, built entirely on the **martingale approach** rather than the classical PDE route. Its guiding thread is the correspondence between the discrete and the continuous settings: every tool of stochastic calculus introduced in the second half (Itô integral, Itô's formula, Girsanov's theorem, martingale representation) is presented as the continuous-time counterpart of an elementary object already met in the binomial model.
+The thesis is a self-contained, rigorous development of the theory of European option pricing, from the one-period binary model up to the proof of the Black-Scholes formula, built entirely on the **martingale approach** rather than the classical PDE route. As the title indicates, the central object is the risk-neutral measure: it first appears as a reweighting of the paths of the binomial tree, and in continuous time it is constructed through Girsanov's theorem; the price of a financial product is then its discounted expected payoff under this measure, a formula justified by replication through the martingale representation theorem. Its guiding thread is the correspondence between the discrete and the continuous settings: every tool of stochastic calculus introduced in the second half (Itô integral, Itô's formula, Girsanov's theorem, martingale representation) is presented as the continuous-time counterpart of an elementary object already met in the binomial model.
 
 ## Abstract
 
@@ -39,6 +39,7 @@ Some proofs that the standard references present in summary form or at a higher 
 option-pricing-via-martingales/
 ├── README.md
 ├── LICENSE
+├── CITATION.cff
 ├── .gitignore
 ├── en/
 │   ├── thesis_en.tex      English version (LaTeX source)

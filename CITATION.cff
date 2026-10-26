@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use or refer to this work, please cite it as below."
+type: software
+title: "From the Risk-Neutral Measure to Girsanov's Theorem in Stochastic Integration: Pricing of Financial Products"
+abstract: >-
+  Bachelor's thesis in Mathematics (University of Oviedo) developing the theory
+  of European option pricing via the martingale approach, from the binomial
+  model to Girsanov's theorem and the Black-Scholes formula. Spanish original
+  and English version, with LaTeX sources.
+authors:
+  - family-names: "Cepeda Rocandio"
+    given-names: "Roberto"
+repository-code: "https://github.com/indexxxxbraker/option-pricing-via-martingales"
+license: CC-BY-NC-ND-4.0
+keywords:
+  - mathematical finance
+  - stochastic calculus
+  - option pricing
+  - risk-neutral measure
+  - Girsanov's theorem
+  - martingale representation
+  - Black-Scholes formula
+preferred-citation:
+  type: thesis
+  thesis-type: "Bachelor's thesis"
+  title: "De la medida neutral al riesgo al Teorema de Girsanov en integración estocástica. Valoración de productos financieros"
+  authors:
+    - family-names: "Cepeda Rocandio"
+      given-names: "Roberto"
+  institution:
+    name: "University of Oviedo"
+    city: "Oviedo"
+    country: ES
+  department: "Faculty of Science"
+  year: 2026
+  languages:
+    - es
+  url: "https://github.com/indexxxxbraker/option-pricing-via-martingales"
+  notes: >-
+    Supervised by José Santos Domínguez Menchero. Pre-defence version;
+    deposit and defence expected in May 2027. English translation:
+    "From the Risk-Neutral Measure to Girsanov's Theorem in Stochastic
+    Integration: Pricing of Financial Products".
