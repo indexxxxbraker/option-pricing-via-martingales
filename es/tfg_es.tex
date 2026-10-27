@@ -145,7 +145,7 @@ de las ecuaciones diferenciales parciales, vuelve transparente la
 traducción de las ideas del caso discreto al caso continuo, y permite
 presentar la fórmula de Black-Scholes como el límite natural de la
 fórmula binomial multiperíodo cuando los pasos temporales se hacen
-infinitamente pequeños. Así. el desarrollo requerirá introducir y construir con detalle buena parte del cálculo estocástico necesario para el caso continuo: la integral de Itô, el teorema de Girsanov y el teorema de representación de martingalas. Estas herramientas no solo son necesarias para los fines de este trabajo, sino que ocupan un lugar central en la teoría de procesos estocásticos. La memoria recoge además la derivación de la
+infinitamente pequeños. Así, el desarrollo requerirá introducir y construir con detalle buena parte del cálculo estocástico necesario para el caso continuo: la integral de Itô, el teorema de Girsanov y el teorema de representación de martingalas. Estas herramientas no solo son necesarias para los fines de este trabajo, sino que ocupan un lugar central en la teoría de procesos estocásticos. La memoria recoge además la derivación de la
 EDP clásica de Black-Scholes a partir de la fórmula obtenida vía martingalas, mostrando así
 la consistencia entre ambas formulaciones. 
 
@@ -351,7 +351,7 @@ otra equivalente para transformar un problema difícil en uno tratable es
 de uso corriente en probabilidad y en sus aplicaciones, por ejemplo,
 en la reducción de varianza de las simulaciones Monte Carlo de sucesos
 poco probables, mediante la técnica de \emph{importance sampling}
-(véase, e.g., \cite{karatzas-shreve}). En este sentido, el problema de valoración permite introducir herramientas matemáticas que tienen aplicaciones mucho más amplias.
+(véase, e.g., \cite{glasserman}, sección 4.6). En este sentido, el problema de valoración permite introducir herramientas matemáticas que tienen aplicaciones mucho más amplias.
 
 \section{Objetivos y enfoque del trabajo}
 \label{sec:objetivos}
@@ -3795,7 +3795,8 @@ mediante la densidad $L$. Sustituir una medida por otra equivalente para
 convertir un cálculo difícil en uno asequible es un recurso de uso
 general en probabilidad; en simulación, sin ir más lejos, es el
 fundamento del \emph{importance sampling}, que reduce la varianza de las
-estimaciones Monte Carlo de sucesos poco probables. El teorema de
+estimaciones Monte Carlo de sucesos poco probables (véase
+\cite{glasserman}, sección 4.6). El teorema de
 Girsanov, que abordamos a continuación, es la versión de este método
 adaptada al movimiento browniano.
 \end{observacion}
@@ -5362,6 +5363,11 @@ The pricing of options and corporate liabilities.
 A. Etheridge.
 \emph{A Course in Financial Calculus}.
 Cambridge University Press, Cambridge, 2002.
+
+\bibitem{glasserman}
+P. Glasserman.
+\emph{Monte Carlo Methods in Financial Engineering}.
+Applications of Mathematics, vol.~53. Springer, Nueva York, 2004.
 
 \bibitem{karatzas-shreve}
 I. Karatzas y S. E. Shreve.
