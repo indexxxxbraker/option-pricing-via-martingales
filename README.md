@@ -2,7 +2,7 @@
 
 **Pricing of Financial Products**
 
-Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science. Deposit and defence expected in May 2027.
+Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science. Written January–May 2026; deposit and defence expected in May 2027 (see [Status of the thesis](#status-of-the-thesis)).
 
 [![PDF (English)](https://img.shields.io/badge/PDF-English-blue.svg)](en/thesis_en.pdf)
 [![PDF (Español)](https://img.shields.io/badge/PDF-Espa%C3%B1ol-blue.svg)](es/tfg_es.pdf)
@@ -13,6 +13,12 @@ Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science. D
 This repository contains my *Trabajo de Fin de Grado* (bachelor's thesis) for the Degree in Mathematics at the University of Oviedo, written as part of the double degree in Mathematics and Physics and supervised by **José Santos Domínguez Menchero**. The thesis was written in Spanish and will be defended in Spanish; an English version is provided so that the work is accessible to a wider audience (see the note on the translation below).
 
 The thesis is a self-contained, rigorous development of the theory of European option pricing, from the one-period binary model up to the proof of the Black-Scholes formula, built entirely on the **martingale approach** rather than the classical PDE route. As the title indicates, the central object is the risk-neutral measure: it first appears as a reweighting of the paths of the binomial tree, and in continuous time it is constructed through Girsanov's theorem; the price of a financial product is then its discounted expected payoff under this measure, a formula justified by replication through the martingale representation theorem. Its guiding thread is the correspondence between the discrete and the continuous settings: every tool of stochastic calculus introduced in the second half (Itô integral, Itô's formula, Girsanov's theorem, martingale representation) is presented as the continuous-time counterpart of an elementary object already met in the binomial model.
+
+## Status of the thesis
+
+The thesis is complete. I wrote it between January and May 2026, during my Erasmus+ year at Sapienza University of Rome, a year earlier than planned, and the full text is available here in Spanish and in English. It will be deposited and defended at the University of Oviedo in May 2027.
+
+Until the official deposit, I keep revising the text: corrections, clarifications and fuller justifications of some steps, without changing its scope. The sources and PDFs in this repository are updated as these revisions are made, and each one is recorded in the commit history. The version deposited with the University will be the official one, and it will be published here after the defence.
 
 ## Abstract
 
@@ -31,7 +37,7 @@ This work develops, in a self-contained and mathematically rigorous manner, the 
 | 5. The Black-Scholes model | Market assumptions, portfolios and the self-financing condition in continuous time; the three-step recipe in the continuous setting (Girsanov, the $\mathbb{Q}$-martingale of the discounted payoff, representation and replication); the Black-Scholes formula for the European call; derivation of the Black-Scholes PDE and the Feynman–Kac connection. |
 | 6. Conclusions | Summary, convergence of the binomial formula to Black-Scholes, reflection on the approach, further directions. |
 
-Some proofs that the standard references present in summary form or at a higher level of generality have been developed in full detail and adapted to the Brownian setting: the Itô isometry step by step, the extension of the integral to $\mathcal{H}^2$ and the continuity of the indefinite integral, Itô's formula for functions of Brownian motion, Girsanov's theorem, and the verification that the replicating strategy in the Black-Scholes model is self-financing.
+Some proofs that the standard references present in summary form, take for granted or state at a higher level of generality are developed here in more detail and adapted to the Brownian setting: the construction of the Itô integral, with the Itô isometry proved step by step and the extension to $\mathcal{H}^2$; Itô's formula for functions of Brownian motion; the no-arbitrage argument that motivates a new integral; Girsanov's theorem, via Lévy's characterization; and the verification that the replicating strategy in the Black-Scholes model is self-financing.
 
 ## Repository structure
 
@@ -53,20 +59,22 @@ option-pricing-via-martingales/
 
 ## Building from source
 
-Both versions compile with a standard TeX Live distribution (`pdflatex` + `latexmk`). Required packages: `babel`, `amsmath`, `amssymb`, `amsthm`, `mathtools`, `bm`, `geometry`, `setspace`, `tikz`, `enumitem`, `booktabs`, `caption`, `hyperref`, `xcolor`.
+Both versions compile with `pdflatex` on a standard TeX Live or MiKTeX installation. Run it three times so that cross-references and the table of contents are resolved, or use `latexmk`, which does this automatically but requires Perl. Required packages: `babel` (with its Spanish module for the Spanish version), `amsmath`, `amssymb`, `amsthm`, `mathtools`, `bm`, `geometry`, `setspace`, `tikz`, `enumitem`, `booktabs`, `caption`, `hyperref`, `xcolor`.
 
 ```bash
-cd en && latexmk -pdf thesis_en.tex     # English version
-cd es && latexmk -pdf tfg_es.tex        # Spanish version
+(cd en && latexmk -pdf thesis_en.tex)     # English version
+(cd es && latexmk -pdf tfg_es.tex)        # Spanish version
 ```
 
 ## On the English translation
 
-The thesis was written in Spanish and will be defended in Spanish. The English version was produced by the author with the assistance of AI translation tools (Anthropic's Claude) and then revised in full by the author. The mathematical content, structure and numbering of results are identical in both versions; the Spanish text remains the reference version, and any remaining infelicities in the English are the author's responsibility.
+The thesis was written in Spanish and will be defended in Spanish. The English version was produced by the author with the assistance of AI translation tools (Anthropic's Claude) and then revised in full by the author. Both versions are revised together, so their mathematical content, structure and numbering of results remain identical; the Spanish text is the reference version, and any remaining infelicities in the English are the author's responsibility.
 
 ## Continuation of this work
 
 The natural next step after this thesis is to move from theory to numerical practice and beyond the Black-Scholes assumptions. That is the purpose of my companion repository [**quant-finance-portfolio**](https://github.com/indexxxxbraker/quant-finance-portfolio): a derivative pricing library implemented in parallel in Python and C++, covering analytical Black-Scholes pricing and Greeks, Monte Carlo methods with variance reduction and quasi-Monte Carlo, finite-difference PDE schemes and lattices, and the Heston stochastic volatility model with Fourier, Monte Carlo (Andersen QE) and ADI-PDE pricers, calibration, and exotic options; each method cross-validated against independent ones.
+
+This academic year the work continues in two further directions at the University of Oviedo: a research-collaboration grant from the Spanish Ministry of Education (*Beca de Colaboración*, November 2026 – May 2027), supervised by José Santos Domínguez Menchero, on generic change-of-measure pricing algorithms and the extension to fractional Brownian motion; and my bachelor's thesis in Physics, [*Path Integrals in the Pricing of Path-Dependent Options*](https://github.com/indexxxxbraker/path-integral-option-pricing) (in progress), which looks for a single path-integral framework for Asian, barrier and lookback options.
 
 ## Main references
 
