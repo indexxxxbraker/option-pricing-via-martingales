@@ -225,7 +225,7 @@ $\{L_t\}$ & Radon-Nikodym density process. \\
 \begin{tabular}{@{}p{4cm}p{10cm}@{}}
 $\int_0^t \phi_s\, dW_s$ & Itô stochastic integral. \\
 $\HH^2[0, T]$ & Processes with $\E[\int_0^T \phi_s^2\, ds] < \infty$. \\
-$\langle X, Y\rangle_t$ & Quadratic covariation of $X$ and $Y$. \\
+$\langle W\rangle_t$ & Quadratic variation of Brownian motion on $[0, t]$, equal to $t$. \\
 $dX_t = a_t dt + b_t dW_t$ & Differential notation for Itô processes. \\
 \end{tabular}
 \end{center}
@@ -2579,6 +2579,10 @@ most a $\PP$-null set.
 
 \medskip
 
+\noindent\textbf{Independence of the increments with respect to $(\F_t)$.} For $0 \leq s < t$, the increment $W_t - W_s$ is independent of $\F_s$. Indeed, every event $\{W_{r_1} \in B_1, \ldots, W_{r_k} \in B_k\}$ with $0 \leq r_1 < \cdots < r_k \leq s$ coincides, up to a null set (since $W_0 = 0$ a.s.), with an event determined by the increments $W_{r_1} - W_0, \ldots, W_{r_k} - W_{r_{k-1}}$, which by condition (iii) of Definition~\ref{def:browniano} are independent of $W_t - W_s$. These events form a $\pi$-system that generates $\F_s^W$, and Dynkin's $\pi$-$\lambda$ theorem (see \cite{williams}) extends the independence to $\F_s^W$; since every set in $\F_s$ differs from one in $\F_s^W$ by a null set, it also extends to $\F_s$. For this reason $\{W_t\}$ is called a \emph{Brownian motion with respect to $(\F_t)$}, and it is in this form that condition (iii) will be used from now on.
+
+\medskip
+
 \begin{definicion}[Continuous-time martingale]
 \label{def:martingala_continua}
 Let $(\Omega, \F, (\F_t)_{t \geq 0}, \PP)$ be a filtered probability
@@ -3459,6 +3463,14 @@ shorthand for the corresponding integral identities.
 
 \medskip
 
+\noindent\textbf{Integral with respect to an Itô process.} Let $X$ be an Itô process with representation~\eqref{eq:def_proceso_ito} and let $\phi$ be a progressively measurable process such that $\int_0^T |\phi_s\, a_s|\, ds < \infty$ almost surely and $\phi\, b \in \mathcal{H}^2[0, T]$. We define
+\begin{equation*}
+  \int_0^t \phi_s\, dX_s \eqdef \int_0^t \phi_s\, a_s\, ds + \int_0^t \phi_s\, b_s\, dW_s, \qquad t \in [0, T],
+\end{equation*}
+which in differential notation is written $\phi_t\, dX_t = \phi_t\, a_t\, dt + \phi_t\, b_t\, dW_t$ (see \cite[§4.2]{etheridge}). The definition does not depend on the representation of $X$, since the coefficients of an Itô process are unique: if $\int_0^t (a_s - a'_s)\, ds = \int_0^t (b'_s - b_s)\, dW_s$ for all $t$, the right-hand side is a continuous square-integrable martingale (Theorem~\ref{teo:martingala_integral_indefinida}) with paths of bounded variation, hence identically zero \cite[Lemma~4.2.11]{etheridge}; Itô's isometry then gives $b = b'$ and, consequently, $a = a'$, for almost every $(t, \omega)$. Moreover, for a simple $\phi = \sum_i \xi_i\, \mathbf{1}_{(t_i, t_{i+1}]}$, the integral is the sum $\sum_i \xi_i\, (X_{t_{i+1}} - X_{t_i})$: the accumulated gain from holding $\phi$ units of $X$, as in the discrete stochastic integral~\eqref{eq:integral_discreta}.
+
+\medskip
+
 \noindent\textbf{Statement of Itô's formula.}
 
 \begin{teorema}[Itô's formula for $f(W_t)$]
@@ -3713,7 +3725,7 @@ process
 where $S_0 > 0$, $\nu \in \R$ and $\sigma > 0$. We apply
 Theorem~\ref{teo:formula_ito_general} to the function
 $f(t, x) = S_0\, \exp(\nu t + \sigma x)$ and the process $X_t = W_t$
-(which is an Itô process with $a \equiv 0$, $b \equiv 1$). The
+(which is an Itô process with $a \equiv 0$, $b \equiv 1$). As in Example~1, the derivatives of $f$ are not bounded on the range of $W$, which is the whole of $\R$, but the formula still holds by localization. The
 derivatives of $f$ are
 \begin{equation*}
   \partial_t f = \nu\, f, \qquad
@@ -3732,7 +3744,7 @@ that is,
 \end{equation}
 Identity~\eqref{eq:gbm_sde} is the \emph{stochastic differential
 equation of geometric Brownian motion}, the canonical model for the
-price of the underlying in Black-Scholes (Chapter~\ref{cap:bs}).
+price of the underlying in Black-Scholes (Chapter~\ref{cap:bs}). The coefficients $a_t = \mu S_t$ and $b_t = \sigma S_t$ are continuous and adapted and, since $\E[S_t^2] = S_0^2 e^{(2\mu + \sigma^2) t}$, we have $b \in \mathcal{H}^2[0, T]$: $S$ is an Itô process in the sense of Definition~\ref{def:proceso_ito}.
 
 \medskip
 
@@ -3748,7 +3760,7 @@ $Y_t \eqdef -\int_0^t \theta_s\, dW_s - \tfrac{1}{2} \int_0^t \theta_s^2\, ds$,
 which is an Itô process with
 $dY_t = -\tfrac{1}{2} \theta_t^2\, dt - \theta_t\, dW_t$. The process
 $L_t = \exp(Y_t)$ is a function of the Itô process $Y$ via
-$f(y) = e^y$, with $f'(y) = f''(y) = e^y = L_t$. By
+$f(y) = e^y$, with $f'(y) = f''(y) = e^y = L_t$. Here too the derivatives of $f$ are not bounded: the formula still holds by localization, and the resulting stochastic integral is defined in the sense of Section~\ref{sec:construccion_ito} provided that $\theta\, L \in \mathcal{H}^2$. By
 Theorem~\ref{teo:formula_ito_general} applied to $f(Y_t)$, where the
 drift coefficient of $Y$ is $-\tfrac{1}{2}\theta_t^2$ and the
 diffusion coefficient is $-\theta_t$,
@@ -3970,7 +3982,7 @@ $(\Omega, \F, \PP)$, with $X_0 = 0$ almost surely. If:
   \item the process $\{X_t^2 - t\}$ is also a martingale with respect
         to $(\F_t)$ under $\PP$;
 \end{enumerate}
-then $\{X_t\}$ is a standard Brownian motion under $\PP$.
+then $\{X_t\}$ is a standard Brownian motion under $\PP$ and, moreover, for $0 \leq s < t$, the increment $X_t - X_s$ is independent of $\F_s$.
 \end{teorema}
 
 The proof of this theorem, as formulated here, can be found in
@@ -4052,10 +4064,13 @@ by reversing the argument.
 
 Having established the lemma, it suffices to prove that
 $\{\widetilde{W}_t\, L_t\}$ is a $\PP$-martingale. Let us compute its
-SDE under $\PP$ by applying the product rule, which is a particular
-case of the general Itô formula
-(Theorem~\ref{teo:formula_ito_general}) applied to $f(x, y) = xy$
-with $X_t = \widetilde{W}_t$ and $Y_t = L_t$ as arguments. The
+SDE under $\PP$ by applying the product rule for two Itô processes
+driven by the same Brownian motion,
+$d(X_t Y_t) = X_t\, dY_t + Y_t\, dX_t + b^X_t\, b^Y_t\, dt$, where $b^X$ and
+$b^Y$ are their diffusion coefficients, which follows from applying Itô's
+formula (Theorem~\ref{teo:formula_ito_general}) to $(X_t + Y_t)^2$, $X_t^2$
+and $Y_t^2$ and subtracting \cite[Theorem~4.4.2]{etheridge}. We apply it
+with $X_t = \widetilde{W}_t$ and $Y_t = L_t$. The
 differentials of the processes are
 \begin{equation*}
   d\widetilde{W}_t = \theta_t\, dt + dW_t, \qquad
@@ -4162,7 +4177,7 @@ and
 Under the measure $\Q$, the process $X$ loses its drift and becomes a
 pure stochastic integral with respect to the new Brownian motion
 $\widetilde{W}$. In particular, by
-Theorem~\ref{teo:martingala_integral_indefinida}, $\{X_t\}$ is a
+Theorem~\ref{teo:martingala_integral_indefinida}, provided that $b \in \mathcal{H}^2[0, T]$ with respect to $\Q$, $\{X_t\}$ is a
 $\Q$-martingale.
 \section{The Brownian martingale representation theorem}
 \label{sec:representacion_martingalas}
@@ -4494,9 +4509,9 @@ pair of stochastic processes $(\phi_t, \psi_t)_{t \in [0, T]}$ where:
   \item $\psi_t$ represents the quantity of the risk-free bond in the
         portfolio at time $t$;
   \item both processes are adapted to the Brownian filtration
-        $(\F_t)$ and satisfy the technical integrability conditions
+        $(\F_t)$ and satisfy the technical integrability conditions\footnote{The condition on $\phi$ guarantees that the integral $\int \phi\, dS$ is defined and rules out pathological strategies: without a restriction of this kind there exist in continuous time \emph{self-financing} strategies that, starting from zero capital, end with a positive value with probability one, at the cost of unbounded intermediate losses (see the doubling strategy of \cite[Example~5.1.1]{etheridge}, which motivates this restriction). From Section~\ref{subsec:paso1_girsanov} onwards we work under the measure $\Q$, and the condition is then understood with respect to $\Q$: the integral $\int \phi\, dS$ does not depend on the equivalent measure under which it is computed, but membership of $\mathcal{H}^2$ does, since $d\Q/d\PP = L_T$ is not constant.}
         \begin{equation*}
-          \phi \in \mathcal{H}^2[0, T], \qquad
+          \phi\, S \in \mathcal{H}^2[0, T], \qquad
           \int_0^T |\psi_s|\, ds < \infty \text{ almost surely}.
         \end{equation*}
 \end{enumerate}
@@ -4510,7 +4525,7 @@ given by
 The integrability conditions on $(\phi, \psi)$ are those guaranteeing
 that the integrals that will appear next, the stochastic integral
 $\int \phi\, dS$ and the ordinary integral $\int \psi\, dB$, are well
-defined in the sense of Chapter~\ref{cap:itocalculus}. The
+defined: the first in the sense of the integral with respect to an Itô process (Section~\ref{subsec:procesos_ito_y_formula}), with $a_t = \mu S_t$ and $b_t = \sigma S_t$, and the second as a Lebesgue integral, since $dB_t = r B_t\, dt$. The
 adaptedness of $\phi$ and $\psi$ to $(\F_t)$ is the translation to
 the continuous setting of discrete predictability
 (Section~\ref{subsec:predecibles_int_disc}): the portfolio is decided
@@ -4569,47 +4584,6 @@ exclusively from changes in the prices of the underlying and of the
 bond, weighted respectively by the quantities $\phi_t$ and $\psi_t$
 held at each instant.
 
-\medskip
-
-\noindent\textbf{Equivalence with the primitive formulation.}
-Definition~\ref{def:self_financing_continuo} is the operational
-formulation of the self-financing condition. It is worth verifying
-its equivalence with the original formulation, which requires zero
-cost in the infinitesimal reallocation of the portfolio.
-
-\begin{proposicion}[Equivalence of the two formulations]
-\label{prop:equivalencia_self_financing}
-Let $(\phi_t, \psi_t)$ be a strategy with
-$V_t = \phi_t\, S_t + \psi_t\, B_t$. The following conditions are
-equivalent:
-\begin{enumerate}[label=\textnormal{(\roman*)}]
-  \item $dV_t = \phi_t\, dS_t + \psi_t\, dB_t$;
-  \item $S_t\, d\phi_t + B_t\, d\psi_t + d\langle \phi, S\rangle_t = 0$,
-\end{enumerate}
-where $\langle \phi, S\rangle_t$ denotes the quadratic covariation of
-the processes $\phi$ and $S$.
-\end{proposicion}
-
-\begin{proof}
-We apply the product rule (a particular case of Itô's formula,
-Theorem~\ref{teo:formula_ito_general}) to the product $\phi_t\, S_t$:
-\begin{equation*}
-  d(\phi_t\, S_t) = \phi_t\, dS_t + S_t\, d\phi_t + d\langle \phi, S\rangle_t.
-\end{equation*}
-Similarly, for $\psi_t\, B_t$, where $B_t$ has bounded variation, so
-that $\langle \psi, B\rangle_t = 0$,
-\begin{equation*}
-  d(\psi_t\, B_t) = \psi_t\, dB_t + B_t\, d\psi_t.
-\end{equation*}
-Adding both identities, we obtain the differential of the value:
-\begin{equation*}
-  dV_t = d(\phi_t S_t + \psi_t B_t)
-       = \phi_t\, dS_t + \psi_t\, dB_t
-       + \bigl[S_t\, d\phi_t + B_t\, d\psi_t + d\langle \phi, S\rangle_t\bigr].
-\end{equation*}
-Condition (i) is therefore equivalent to the vanishing of the term in
-brackets, which is exactly condition (ii).
-\end{proof}
 \section{Application of the three-step recipe}
 \label{sec:tres_pasos_continuo}
 
@@ -4630,17 +4604,11 @@ amount $C_T = h(S_T)$, where $h : (0, \infty) \to \R$ is a measurable
 function, the \emph{payoff} of the derivative, satisfying the
 integrability condition
 \begin{equation}\label{eq:integrabilidad_payoff}
-  \E_\PP\bigl[h(S_T)^2\bigr] < \infty.
+  \E_\PP\bigl[|h(S_T)|^{2p}\bigr] < \infty \quad \text{for some } p > 1.
 \end{equation}
 \end{definicion}
 
-Condition~\eqref{eq:integrabilidad_payoff} is the minimum required
-for the processes built from the \emph{payoff} to lie in the $L^2$
-spaces demanded by the Brownian martingale representation theorem.
-For standard \emph{payoffs}, including the European \emph{call}
-$h(S_T) = (S_T - K)^+$ that we address in
-Section~\ref{sec:formula_bs}, the condition holds automatically by
-the log-normality of $S_T$.
+Condition~\eqref{eq:integrabilidad_payoff} guarantees that $h(S_T) \in L^2(\Q)$, which is what the Brownian martingale representation theorem requires when applied under $\Q$ in Section~\ref{subsec:paso3_replicacion}: if $L_T$ is the density of $\Q$ with respect to $\PP$ to be constructed in~\eqref{eq:L_T_BS} and $1/p + 1/q = 1$, Hölder's inequality gives $\E_\Q[h(S_T)^2] = \E_\PP[L_T\, h(S_T)^2] \le \E_\PP[L_T^q]^{1/q}\, \E_\PP[|h(S_T)|^{2p}]^{1/p}$, and $\E_\PP[L_T^q] < \infty$ because $L_T$ is lognormal. The weaker condition $\E_\PP[h(S_T)^2] < \infty$ would not suffice, since $L_T$ is not bounded. For standard \emph{payoffs}, including the European \emph{call} $h(S_T) = (S_T - K)^+$ that we address in Section~\ref{sec:formula_bs}, the condition holds automatically by the log-normality of $S_T$.
 
 \medskip
 
@@ -4846,12 +4814,7 @@ the risk-neutral measure $\Q$.
 
 \medskip
 
-\noindent\textbf{Well-definedness and square integrability.} For the
-\emph{payoffs} of standard derivatives, including the European
-\emph{call} $(S_T - K)^+$, the condition $h(S_T) \in L^2(\Q)$ holds
-thanks to the log-normality of the underlying under $\Q$
-(see~\eqref{eq:S_explicito_Q}) and the equivalence between $\PP$ and
-$\Q$ (see \cite{karatzas-shreve}, Section 5.8, for the details).
+\noindent\textbf{Well-definedness and square integrability.} By condition~\eqref{eq:integrabilidad_payoff} and Hölder's inequality (see the comment after Definition~\ref{def:derivado_europeo}), $h(S_T) \in L^2(\Q)$.
 Consequently, $M_t \in L^2(\Q)$ for all $t$, a necessary condition
 for applying the Brownian martingale representation theorem in the
 next step.
@@ -4893,7 +4856,7 @@ with $\F_s \subseteq \F_t$,
 $\Q$-martingale $\{M_t\}$ is adapted to the filtration of the
 Brownian motion $\widetilde W$ since, by~\eqref{eq:W_tilde_BS}, the
 filtration $(\F_t)$ generated by $W$ and augmented with the null sets
-is the same as the one generated by $\widetilde W$; moreover, it
+is the same as the one generated by $\widetilde W$\footnote{For each $s \le t$, $\widetilde W_s = W_s + \theta s$ and $W_s = \widetilde W_s - \theta s$ with $\theta$ constant, so each variable is a measurable function of the other and $\sigma(W_s : s \le t) = \sigma(\widetilde W_s : s \le t)$. Since $\Q \sim \PP$ on $\F_T$, the null sets of both measures coincide, and hence so do the augmented filtrations.}; moreover, it
 satisfies $M_t \in L^2(\Q)$ for all $t$ by
 Proposition~\ref{prop:M_es_Q_martingala}. We are therefore in a
 position to apply Theorem~\ref{teo:representacion_martingalas} under
@@ -4961,8 +4924,7 @@ and~\eqref{eq:psi_BS} is \emph{self-financing}, that is, it satisfies
 \end{teorema}
 
 \begin{proof}
-The proof consists in computing both sides of the identity and
-checking that they coincide.
+Let us first check that $(\phi, \psi)$ is a strategy in the sense of Definition~\ref{def:portfolio_continuo}. Both processes are adapted, since $\widetilde\phi$ is progressively measurable and $S$ is continuous, adapted and positive. By~\eqref{eq:phi_BS}, $\phi_t S_t = e^{rt}\, \widetilde\phi_t / \sigma$ and, since $e^{rt} \le e^{rT}$, $\phi S \in \mathcal{H}^2[0, T]$ with respect to $\Q$. By~\eqref{eq:psi_BS}, $\psi_t = M_t - \phi_t \widetilde S_t$: $M$ has continuous paths, hence bounded on $[0, T]$, and $\int_0^T |\phi_s \widetilde S_s|\, ds < \infty$ almost surely by the Cauchy-Schwarz inequality, so $\int_0^T |\psi_s|\, ds < \infty$ almost surely. For the \emph{self-financing} condition, we compute both sides of the identity and check that they coincide.
 
 \emph{Step 1: computation of $dV_t$.} By construction,
 $V_t = e^{rt}\, M_t$. We apply Itô's formula
@@ -5025,7 +4987,7 @@ are in a position to state the main result of the section.
 \label{teo:valoracion_BS}
 Let $h(S_T)$ be a European \emph{payoff} satisfying the integrability
 condition~\eqref{eq:integrabilidad_payoff}. Then there exists a
-unique \emph{self-financing} replicating strategy $(\phi_t, \psi_t)$
+unique \emph{self-financing} replicating strategy $(\phi_t, \psi_t)$, in the sense of Definition~\ref{def:portfolio_continuo},
 for the derivative, with portfolio value at each time $t \in [0, T]$
 given by
 \begin{equation}\label{eq:formula_valoracion}
@@ -5046,15 +5008,7 @@ $V_t = e^{rt}\, M_t = e^{rt}\, \E_\Q[e^{-rT}\, h(S_T) \mid \F_t]
 definition~\eqref{eq:def_M_continuo} of $M_t$ and the
 $\F_t$-measurability of the factor $e^{rt}$.
 
-Uniqueness follows from the uniqueness of the integrand
-$\widetilde\phi$ in the representation theorem
-(Theorem~\ref{teo:representacion_martingalas}): if two
-\emph{self-financing} replicating strategies produced the same
-terminal value $h(S_T)$, their respective martingales
-$\E_\Q[e^{-rT}\, h(S_T) \mid \F_t]$ would coincide, their
-representation would be unique, and by
-\eqref{eq:phi_BS}–\eqref{eq:psi_BS} the two strategies would
-necessarily be equal.
+Uniqueness, among the strategies of Definition~\ref{def:portfolio_continuo}, follows from the uniqueness of the integrand in the representation theorem (Theorem~\ref{teo:representacion_martingalas}). Let $(\phi', \psi')$ be another \emph{self-financing} replicating strategy, with value $V'$ and discounted value $\widetilde V'_t = e^{-rt} V'_t$. The \emph{self-financing} condition gives $d\widetilde V'_t = \phi'_t\, d\widetilde S_t = \phi'_t\, \sigma\, \widetilde S_t\, d\widetilde W_t$ \cite[Lemma~5.1.3]{etheridge}, and since $\phi' S \in \mathcal{H}^2[0, T]$ with respect to $\Q$ (Definition~\ref{def:portfolio_continuo}), also $\phi'\, \sigma\, \widetilde S \in \mathcal{H}^2[0, T]$, so that $\widetilde V'$ is a $\Q$-martingale by Theorem~\ref{teo:martingala_integral_indefinida}. As $\widetilde V'_T = e^{-rT} h(S_T)$, we have $\widetilde V'_t = \E_\Q[e^{-rT}\, h(S_T) \mid \F_t] = M_t$ for all $t$; by the uniqueness of the integrand, $\phi'_t\, \sigma\, \widetilde S_t = \widetilde\phi_t$, that is, $\phi' = \phi$ by~\eqref{eq:phi_BS}, and then $\psi' = \psi$ by~\eqref{eq:psi_BS}. Without the integrability condition of Definition~\ref{def:portfolio_continuo} uniqueness may fail (see the footnote to that definition).
 \end{proof}
 
 \medskip
