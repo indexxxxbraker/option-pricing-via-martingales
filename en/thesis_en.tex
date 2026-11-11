@@ -278,9 +278,7 @@ is uniquely determined. Determining this price, and constructing the
 strategy that allows the writer of the option to \emph{replicate} its
 value, is the problem around which the present work is organized.
 
-\medskip
-
-\noindent\textbf{Historical note.} The first mathematical formulation
+The first mathematical formulation
 of the problem is due to Louis Bachelier, who in his doctoral thesis
 \emph{Théorie de la spéculation} \cite{bachelier} modeled the
 dynamics of stock prices by means of Brownian motion. Bachelier's
@@ -296,9 +294,7 @@ formula, which constitutes the central result of the present work, is
 today one of the most influential mathematical developments of the
 last half century.
 
-\medskip
-
-\noindent\textbf{Why it is mathematically interesting.} Beyond its
+Beyond its
 practical relevance, the problem requires a rich mathematical
 apparatus: advanced probability (martingales, conditional
 expectation), stochastic analysis (Brownian motion, Itô integral and
@@ -306,9 +302,7 @@ formula), functional analysis (density in $L^2$) and, in its PDE
 version, parabolic equations. The Black-Scholes formula is a meeting
 point of several central areas of modern mathematics.
 
-\medskip
-
-\noindent\textbf{A more general framework than it seems.} It is worth
+It is worth
 anticipating an idea that runs through the whole work and goes
 beyond the financial problem that motivates it. The notion of fair
 price will lead us, both in the discrete and in the continuous model,
@@ -343,24 +337,19 @@ transferring the problem and its solution to the \emph{continuous}
 setting of the Black-Scholes model, by developing the necessary
 stochastic calculus.
 
-\medskip
-
-\noindent\textbf{Justification of the discrete-to-continuous plan.}
 The chosen order of exposition is pedagogical, not historical:
 chronologically, the Black-Scholes formula (1973) predates the
 multi-period binomial model (Cox, Ross and Rubinstein, 1979).
 However, from the mathematical point of view the binomial model is
 structurally simpler: it allows the central ideas of the theory
-(change of measure, replication, no-arbitrage) to be articulated with
+(change of measure, replication, no-arbitrage) to be set out with
 elementary probability tools, without the apparatus of stochastic
 calculus. This fact is what justifies the plan adopted: once the
 logic of the problem has been assimilated in the discrete setting,
 the passage to the continuous one reduces to a technical translation
 of the tools, keeping the conceptual ideas intact.
 
-\medskip
-
-\noindent\textbf{The martingale route.} The continuous Black-Scholes
+The continuous Black-Scholes
 theory admits two classical routes: martingales (change of measure
 and representation theorems) and PDEs (instantaneous hedging). We opt
 for the former since it admits a direct translation from the discrete
@@ -372,16 +361,14 @@ up a good part of the technical content of the work. The PDE route is
 recovered at the end (Section~\ref{sec:edp_bs}) as a consequence of
 the martingale formulation.
 
-\medskip
-
-\noindent\textbf{What the work does not address.} For reasons of
+For reasons of
 length and of consistency with the chosen plan, the work is
 restricted to \emph{European} options on a single underlying, in the
 Black-Scholes model with constant parameters. Consequently, several
-natural extensions lie outside its scope—American options, models
+natural extensions lie outside its scope (American options, models
 with stochastic volatility or jumps, numerical methods for
 \emph{payoffs} without a closed-form formula, calibration to market
-data—and are briefly collected in Chapter~\ref{cap:conclusiones} as
+data) and are briefly collected in Chapter~\ref{cap:conclusiones} as
 further directions.
 
 \section{Sources and own contribution}
@@ -458,9 +445,7 @@ discrete part (Chapter~\ref{cap:discreto}), the continuous
 foundations (Chapters~\ref{cap:brown} and~\ref{cap:itocalculus}), the
 application to Black-Scholes (Chapter~\ref{cap:bs}) and conclusions.
 
-\medskip
-
-\noindent\textbf{Chapter~\ref{cap:discreto}: the binomial model.} It
+Chapter~\ref{cap:discreto}
 poses the pricing problem in the discrete setting of the multi-period
 binomial model. It sets out the elementary probability tools
 required (filtrations, conditional expectation, martingales, discrete
@@ -472,32 +457,25 @@ chapter concludes with a brief introduction to the continuous
 setting, anticipating the convergence of the binomial random walk to
 Brownian motion.
 
-\medskip
-
-\noindent\textbf{Chapter~\ref{cap:brown}: Brownian motion.} It
+Chapter~\ref{cap:brown}
 introduces Brownian motion as a mathematical object, establishes its
 existence as a theorem (without proof, citing the literature) and
 studies the properties of its paths: continuity, nowhere
 differentiability, infinite total variation and finite quadratic
 variation equal to the length of the interval. This last property is
-the technical piece that will motivate the development of the
+the technical fact that will motivate the development of the
 stochastic calculus of the following chapter.
 
-\medskip
-
-\noindent\textbf{Chapter~\ref{cap:itocalculus}: stochastic calculus.}
-It constitutes the technical core of the work. It constructs the Itô
+Chapter~\ref{cap:itocalculus} constitutes the technical core of the work. It constructs the Itô
 stochastic integral first on simple processes and then, by density,
 on the space $\mathcal{H}^2$. It proves Itô's formula for functions of
 Brownian motion and states its general version. It formulates the
 change of measure in continuous time by means of Girsanov's theorem,
 and states the Brownian martingale representation theorem. Each of
-these pieces is the translation to the continuous setting of an
+these tools is the translation to the continuous setting of an
 object introduced in the discrete case in Chapter~\ref{cap:discreto}.
 
-\medskip
-
-\noindent\textbf{Chapter~\ref{cap:bs}: the Black-Scholes model.} It
+Chapter~\ref{cap:bs}
 applies the tools of Chapter~\ref{cap:itocalculus} to the pricing
 problem in the Black-Scholes model, carrying out the three-step
 recipe in its continuous version. It obtains the general formula for
@@ -508,9 +486,7 @@ $d_2$. The chapter concludes by deriving the Black-Scholes PDE from
 the formula obtained, showing the consistency with the classical
 route.
 
-\medskip
-
-\noindent\textbf{Chapter~\ref{cap:conclusiones}: conclusions.} It
+Finally, Chapter~\ref{cap:conclusiones}
 summarizes the work carried out, presents the convergence of the
 multi-period binomial formula to the Black-Scholes formula (as the
 culmination of the relationship between the two models in
@@ -534,9 +510,7 @@ and a risky asset. Derivative contracts will be built on them; their
 value ultimately depends on the future behavior of the underlying
 asset.
 
-\medskip
-
-\noindent\textbf{The risk-free bond.} We denote by $B_t$ the price at
+We denote by $B_t$ the price at
 time $t \geq 0$ of the risk-free asset, normalized so that $B_0 = 1$.
 This asset represents an investment without uncertainty (in practice,
 an interest-bearing deposit or a government bond) whose value grows
@@ -590,9 +564,7 @@ equivalent to a continuous rate $r = \log(1.05) \approx 0.0488$, that
 is, $4.88\%$. From now on, $r$ will always denote the continuously
 compounded rate.
 
-\medskip
-
-\noindent\textbf{The risky stock.} By contrast, the price of the risky
+By contrast, the price of the risky
 asset (which we shall generically call the \emph{stock}) is modeled as
 a stochastic process $\{S_t\}_{t \geq 0}$ defined on a suitable
 probability space. The specific dynamics of $\{S_t\}$ will be made
@@ -601,9 +573,7 @@ a finite set at each time (binomial model), whereas in
 Chapters~\ref{cap:brown} and \ref{cap:bs} we shall consider
 continuous-time models.
 
-\medskip
-
-\noindent\textbf{Derivative contracts.} A \emph{derivative contract}
+A \emph{derivative contract}
 is an agreement between two parties whose \emph{payoff} (the amount
 they must exchange at a future date) depends on the price of the
 underlying asset. Three derivatives will appear repeatedly throughout
@@ -611,7 +581,7 @@ this work; they are introduced in the following definitions, where
 $T > 0$ denotes the maturity date and $K > 0$ the price agreed in the
 contract.
 
-\begin{definicion}[Forward contract]
+\begin{definicion}
 A \emph{forward} contract on the stock $S$ with maturity $T$ and
 delivery price $K$ is an agreement whereby the buyer is obliged to
 purchase the asset $S$ at time $T$ at the price $K$, fixed in advance.
@@ -650,7 +620,7 @@ hedging use, options are also employed for speculative purposes, since
 they allow one to bet on the direction of the price with a small
 initial outlay.
 
-\begin{definicion}[European \emph{call} option]
+\begin{definicion}
 A European \emph{call option} on $S$ with maturity $T$ and strike
 price $K$ gives the buyer the right (but not the obligation) to
 purchase the asset at $T$ at the price $K$. Its \emph{payoff} at $T$
@@ -660,7 +630,7 @@ is the random variable
 \end{equation*}
 \end{definicion}
 
-\begin{definicion}[European \emph{put} option]
+\begin{definicion}
 A European \emph{put option} on $S$ with maturity $T$ and strike price
 $K$ gives the buyer the right (but not the obligation) to sell the
 asset at $T$ at the price $K$. Its \emph{payoff} at $T$ is the random
@@ -677,9 +647,7 @@ not to exercise, choosing whichever is more favorable. Their
 whose fair price at $t = 0$ turns out to be zero, an option always has
 strictly positive value when it is written.
 
-\medskip
-
-\noindent\textbf{Vocabulary.} In standard terminology, the asset $S$ is
+In standard terminology, the asset $S$ is
 called the \emph{underlying}, the price $K$ the \emph{strike}, and $T$
 the \emph{maturity}. The qualifier \emph{European} indicates that
 exercise is only possible at $T$, in contrast with American options
@@ -696,10 +664,8 @@ or the \emph{no-arbitrage principle}, is not a mathematical result we
 are going to prove, but an assumption about the market that we take
 as our starting point.
 
-\medskip
-
-\noindent\textbf{The informal idea.} An \emph{arbitrage opportunity}
-is, intuitively, an investment strategy which, starting from zero
+An \emph{arbitrage opportunity}
+is, informally, an investment strategy which, starting from zero
 initial capital, guarantees the investor a nonnegative profit in every
 possible scenario and a strictly positive one in at least one of them.
 In other words: a way of obtaining something from nothing, without
@@ -712,9 +678,7 @@ exist, are transient phenomena. The mathematical formalization is
 deferred to Section~\ref{sec:binario}, once the model has been
 specified.
 
-\medskip
-
-\noindent\textbf{The replication principle.} The no-arbitrage
+The no-arbitrage
 assumption can be reformulated in a more operational way. The
 following statement, although informal, captures its fundamental idea.
 
@@ -743,9 +707,7 @@ discrete and in the continuous setting, the problem of finding the
 price of a derivative will ultimately reduce to the problem of
 constructing a replicating portfolio.
 
-\medskip
-
-\noindent\textbf{On the role of probabilities.} It is worth making a
+It is worth making a
 remark that will gain significance over the course of the chapter:
 the replication argument, as we have formulated it, never makes use of
 the probabilities attached to each future scenario. Only the
@@ -766,10 +728,7 @@ transaction costs and in arbitrary fractional amounts. These
 assumptions are idealizations, but they will suffice for the arguments
 that follow to hold.
 
-\medskip
-
-\noindent\textbf{The fair price of a \emph{forward} with \emph{strike}
-$K$.} Consider a \emph{forward} on the stock $S$ with maturity $T$ and
+Consider a \emph{forward} on the stock $S$ with maturity $T$ and
 delivery price $K$. Its \emph{payoff} to the buyer at $T$ is
 $S_T - K$. We seek the fair price $V_0$ of the contract at the initial
 time: the amount the buyer must pay the writer at $t = 0$ in exchange
@@ -806,9 +765,7 @@ investor would have obtained a sure profit without taking on any risk.
 The symmetric situation $V_0' < S_0 - K e^{-rT}$ leads to an analogous
 arbitrage.
 
-\medskip
-
-\noindent\textbf{The fair strike and the \emph{forward} price.} In
+In
 practice, \emph{forwards} are usually entered into with $V_0 = 0$.
 Imposing this condition in \eqref{eq:precio_forward} allows us to solve
 for the delivery price that makes the contract fair:
@@ -819,10 +776,6 @@ This quantity is called the \emph{forward price} of the stock for the
 maturity $T$, and it is interpreted as the value at $t = T$ that one
 unit of stock bought today would have if compounded at the risk-free
 rate.
-
-\medskip
-
-\noindent\textbf{Two general lessons.}
 
 \begin{observacion}[Independence from the dynamics of the underlying]
 The derivation of the \emph{forward} price has made no use whatsoever
@@ -846,7 +799,7 @@ appears in formula \eqref{eq:precio_forward}. The fair price of the
 \emph{forward} does not depend on how likely it is, according to the
 market's beliefs, that the stock will go up or down, nor on its
 expected mean return, nor on its volatility. This independence from
-subjective probabilities will reappear, in a subtler form, in the
+subjective probabilities will reappear, in a less obvious form, in the
 nontrivial models we study next.
 \end{observacion}
 
@@ -863,7 +816,7 @@ two possible values at $T$.
 \subsection{Description of the model and formalization of no-arbitrage}
 \label{subsec:setup_binario}
 
-\noindent\textbf{Description of the model.} The market consists of a
+The market consists of a
 risk-free bond, with $B_t = e^{rt}$ and $r > 0$, and a stock whose
 initial price $S_0 > 0$ is known and whose final price $S_T$ is a
 random variable taking only two values. Specifically, we fix two
@@ -894,11 +847,7 @@ specify which scenarios we regard as \emph{possible} (those with
 strictly positive probability). The numerical value of $p$ will play
 no part in any computation.
 
-\medskip
-
-\noindent\textbf{Formalization of the notion of arbitrage.}
-
-\begin{definicion}[Strategy or portfolio]
+\begin{definicion}
 A \emph{strategy} in the one-period binary model is a pair
 $(\phi, \psi) \in \R^2$, where $\phi$ represents the number of units of
 the stock and $\psi$ the number of units of the bond held in the
@@ -916,7 +865,7 @@ $\psi < 0$ to borrowing an amount $|\psi|$ from the bank. This
 possibility is essential for the theory: without it, not every option
 could be replicated.
 
-\begin{definicion}[Arbitrage opportunity]
+\begin{definicion}
 \label{def:arbitraje}
 A strategy $(\phi, \psi)$ is an \emph{arbitrage opportunity} if:
 \begin{enumerate}[label=\textnormal{(\roman*)}]
@@ -1033,9 +982,7 @@ portfolio cancel out, producing a sure profit. Similarly for
 $V_0' < V_0$. Both situations contradict the no-arbitrage assumption.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Two remarks.} Formula \eqref{eq:precio_binario} does
+Formula \eqref{eq:precio_binario} does
 not contain the subjective probability $p$: the price depends only on
 $S_0, u, d, r, T, C_u, C_d$. On the other hand, the quantity $\phi$
 obtained in~\eqref{eq:phi_psi} is the ratio between the change in the
@@ -1047,8 +994,8 @@ underlying and is known in the financial literature as the
 \subsection{Emergence of the risk-neutral measure}
 \label{subsec:medida_riesgo}
 
-Formula~\eqref{eq:precio_binario} admits an elementary algebraic
-manipulation that brings out a new (and central) object of the
+An elementary algebraic manipulation of formula~\eqref{eq:precio_binario}
+brings out a new (and central) object of the
 theory. Regrouping the terms in $C_u$ and $C_d$,
 \begin{equation*}
   V_0 = e^{-rT}\!\left[\frac{e^{rT} - d}{u - d}\, C_u
@@ -1064,9 +1011,7 @@ compact form
   V_0 = e^{-rT}\,\bigl[\,q\, C_u + (1 - q)\, C_d\,\bigr].
 \end{equation}
 
-\medskip
-
-\noindent\textbf{Properties of the ratio $q$.} The no-arbitrage
+The no-arbitrage
 condition $d < e^{rT} < u$ implies that both $e^{rT} - d > 0$ and
 $u - d > 0$, and that $u - e^{rT} > 0$. Consequently, $q \in (0, 1)$.
 The converse statement is also easily verified. This equivalence
@@ -1077,16 +1022,14 @@ formula~\eqref{eq:precio_binario_q} are nonnegative numbers adding up
 to one, that is, \emph{they are the probabilities of a measure on
 $\Omega$}.
 
-\medskip
-
-\noindent\textbf{Definition of the risk-neutral measure.} The
+The
 preceding remark justifies introducing, on the space $(\Omega, \F)$,
 a new probability measure
 \begin{equation}\label{eq:def_Q}
   \Q(\{\omega_u\}) = q, \qquad \Q(\{\omega_d\}) = 1 - q.
 \end{equation}
 
-\begin{definicion}[Risk-neutral measure]
+\begin{definicion}
 \label{def:medida_riesgo}
 The probability $\Q$ defined in~\eqref{eq:def_Q} is called the
 \emph{risk-neutral measure} (or \emph{equivalent martingale measure})
@@ -1099,9 +1042,7 @@ same events. In the language of measure theory, they are
 here, will be a delicate condition in the continuous models of
 Chapter~\ref{cap:bs}.
 
-\medskip
-
-\noindent\textbf{The fundamental property of $\Q$.} Let us compute
+Let us compute
 the expectation (under $\Q$) of the discounted stock price at
 $t = T$:
 \begin{align*}
@@ -1132,9 +1073,7 @@ same expected return. In reality (under $\PP$) investors are
 risk-averse and demand a premium for holding risky assets; the measure
 $\Q$ removes that premium by construction.
 
-\medskip
-
-\noindent\textbf{The pricing formula as a discounted expectation.} By
+By
 the definition~\eqref{eq:def_Q} of $\Q$, the expression
 $q\, C_u + (1-q)\, C_d$ is exactly the expectation of $C_T$ under
 $\Q$. The pricing formula then takes its definitive form
@@ -1146,14 +1085,14 @@ the expectation of its \emph{payoff} under the risk-neutral measure
 $\Q$. The formula reduces the pricing problem to a computation of
 expectations, once the appropriate measure has been identified.
 
-Let us insist on a remarkable feature of
+Let us insist on a striking feature of
 \eqref{eq:precio_esperanza}: we have arrived at it without ever using
 the subjective probability $p$.
 
 \subsection{Independence from subjective probabilities}
 \label{subsec:indep_subjetiva}
 
-\noindent\textbf{An intuition worth correcting.} For a reader with a
+For a reader with a
 background in probability, the first natural answer to the question
 ``what is the fair price of a derivative with random \emph{payoff}
 $C_T$?'' would be: \emph{the discounted expected value of its
@@ -1179,9 +1118,7 @@ price $V_0^{\text{naive}}$, set up the replicating portfolio at cost
 $V_0$, and pocket the difference without taking on any risk. The
 situation $p < q$ produces a symmetric arbitrage.}.
 
-\medskip
-
-\noindent\textbf{Pricing by replication, not by expectation.} The
+The
 argument that led us to~\eqref{eq:precio_esperanza} does not rest on
 any computation of expectations under the market measure, but on the
 explicit construction of a replicating portfolio. What determines the
@@ -1192,9 +1129,7 @@ replicating portfolio reproduces the \emph{payoff} in \emph{all
 possible scenarios}, with no need to weight them by their
 probabilities.
 
-\medskip
-
-\noindent\textbf{The role of probabilities in the theory.} The above
+The above
 might suggest that probabilities disappear from the pricing problem,
 but this is not so: the \emph{relevant} probabilities are not those
 of the market, but those of the risk-neutral measure $\Q$. Under
@@ -1203,10 +1138,6 @@ expectation of the \emph{payoff}. The initial probabilistic intuition
 was not wrong in its form (the price is indeed a discounted
 expectation) but in the choice of the measure under which it must be
 taken.
-
-This replacement of $\PP$ by $\Q$ is the idea that will structure the
-subsequent development, both in the multi-period binomial model and
-in Black-Scholes.
 
 \subsection{The trinomial model and incompleteness}
 \label{subsec:ternario}
@@ -1238,7 +1169,7 @@ has no solution. The conclusion is immediate: in the trinomial model,
 the replication method fails, and the no-arbitrage principle, by
 itself, does not provide a unique price.
 
-\begin{definicion}[Complete market, preliminary version]
+\begin{definicion}
 \label{def:completitud_preliminar}
 A market is said to be \emph{complete} if every derivative on the
 assets of the market admits a replicating portfolio.
@@ -1269,16 +1200,14 @@ formalize natural financial ideas of the model.
 \subsection{Description of the multi-period binomial model}
 \label{subsec:setup_multiperiodo}
 
-\noindent\textbf{Discretization of the time horizon.} Fix $T > 0$ and
+Fix $T > 0$ and
 an integer $N \geq 1$. We subdivide $[0, T]$ into $N$ subintervals of
 length $\delta t \eqdef T/N$, and consider the times
 $t_k \eqdef k\, \delta t$ for $k = 0, 1, \ldots, N$. The market is
 observed only at these times. The bond evolves deterministically:
 $B_k \eqdef e^{r\, t_k}$.
 
-\medskip
-
-\noindent\textbf{The dynamics of the underlying.} The stock has a known
+The stock has a known
 initial price $S_0 > 0$. We fix constants $u, d$ with $0 < d < u$ and
 assume that between two consecutive times the price is multiplied by
 $u$ with probability $p$ or by $d$ with probability $1-p$,
@@ -1333,9 +1262,7 @@ reduces the number of nodes from $2^k$ to $k+1$.}
 \label{fig:arbol_binomial}
 \end{figure}
 
-\medskip
-
-\noindent\textbf{The probability space.} As sample space we take the
+As sample space we take the
 set of all possible paths:
 \begin{equation*}
   \Omega \eqdef \{u, d\}^N,
@@ -1360,9 +1287,7 @@ In what follows we assume familiarity with the basic notions of
 probability (measurable space, $\sigma$-algebra, random variable,
 expectation) covered in any \emph{STEM} degree.
 
-\medskip
-
-\noindent\textbf{$\sigma$-algebras as information.} The idea is that a
+A
 $\sigma$-algebra $\G \subseteq \F$ on $(\Omega, \F)$ can be
 interpreted as the set of those events whose occurrence an observer is
 able to determine: if $A \in \G$, the observer can answer the question
@@ -1370,9 +1295,6 @@ able to determine: if $A \in \G$, the observer can answer the question
 the omniscient observer; sub-$\sigma$-algebras $\G \subseteq \F$
 correspond to observers with partial information.
 
-\medskip
-
-\noindent\textbf{The $\sigma$-algebra $\F_k$ of the binomial model.}
 Let us illustrate this reading on the multi-period binomial model. For
 each $k \in \{0, 1, \ldots, N\}$, we define $\F_k$ as the
 $\sigma$-algebra generated by the partition of $\Omega$ that groups
@@ -1393,7 +1315,7 @@ The sequence $(\F_k)_{k=0}^{N}$ is \emph{increasing}:
 $\F_k \subseteq \F_{k+1}$ for all $k$. This motivates the following
 definition.
 
-\begin{definicion}[Filtration]
+\begin{definicion}
 \label{def:filtracion}
 Let $(\Omega, \F, \PP)$ be a probability space. A \emph{filtration} on
 this space is a sequence $(\F_k)_{k=0}^{N}$ of sub-$\sigma$-algebras
@@ -1407,7 +1329,7 @@ is the \emph{market filtration}.
 
 \medskip
 
-\begin{definicion}[Adapted process]
+\begin{definicion}
 \label{def:adaptado}
 A \emph{stochastic process} is a sequence $(X_k)_{k=0}^{N}$ of random
 variables on $(\Omega, \F)$. The process is \emph{adapted} to the
@@ -1422,7 +1344,7 @@ process is adapted.
 
 \medskip
 
-\begin{definicion}[Natural filtration]
+\begin{definicion}
 \label{def:filtracion_natural}
 The \emph{natural filtration} of a process $(X_k)_{k=0}^{N}$ is
 $(\F_k^X)_{k=0}^{N}$ with $\F_k^X \eqdef \sigma(X_0, X_1, \ldots, X_k)$,
@@ -1438,7 +1360,7 @@ identified and denoted simply by $(\F_k)$.
 \subsection{Conditional expectation}
 \label{subsec:esperanza_condicional}
 
-\noindent\textbf{Starting point.} The reader will recall the
+The reader will recall the
 elementary notion of conditional expectation given an event $B \in \F$
 with $\PP(B) > 0$: the number $\E[X \mid B] \eqdef \E[X\, \1_B]/\PP(B)$,
 which represents the mean value of $X$ in those scenarios in which
@@ -1447,9 +1369,7 @@ we do not want to condition on an individual event, but on a whole
 $\sigma$-algebra $\G \subseteq \F$, and the result will no longer be a
 number but a random variable.
 
-\medskip
-
-\noindent\textbf{Motivation on the tree.} Let $X$ be an
+Let $X$ be an
 $\F_3$-measurable random variable on the binomial tree with $N = 3$
 steps, and let us ask for its mean value ``given the information
 $\F_2$''. Intuitively, standing at time $t_2$ the observer has reached
@@ -1458,14 +1378,10 @@ compatible paths, corresponding to the two outcomes of the third
 step. The conditional expectation given $\F_2$ must assign to each
 atom the mean value of $X$ over the two compatible paths. It is an
 $\F_2$-measurable random variable (constant on each atom of $\F_2$).
-The axiomatic definition captures this idea without resorting to the
+The axiomatic definition, due to Kolmogorov, captures this idea without resorting to the
 particular structure of the model.
 
-\medskip
-
-\noindent\textbf{Kolmogorov's definition.}
-
-\begin{definicion}[Conditional expectation]
+\begin{definicion}
 \label{def:esperanza_condicional}
 Let $X$ be an integrable random variable on $(\Omega, \F, \PP)$ and
 $\G \subseteq \F$ a sub-$\sigma$-algebra. A random variable $Y$ is a
@@ -1499,9 +1415,7 @@ determined from the information $\G$. Condition (ii) is the
 $\E[X \mid \G]$ and $X$ coincide. Taking $A = \Omega$,
 $\E[\E[X \mid \G]] = \E[X]$.
 
-\medskip
-
-\noindent\textbf{Fundamental properties.} In what follows, $X, Y$ are
+In what follows, $X, Y$ are
 integrable random variables and $\G, \HH \subseteq \F$ are
 sub-$\sigma$-algebras.
 
@@ -1539,13 +1453,11 @@ $\G$,
 By uniqueness, $Z = \E[X \mid \HH]$ almost surely.
 \end{proof}
 
-The intuitive reading of the tower property is the following:
+In other words,
 conditioning first on richer information $\G$ and then on coarser
 information $\HH$ is equivalent to conditioning directly on $\HH$.
 
-\medskip
-
-\noindent\textbf{Shorthand notation.} If $Y_1, \ldots, Y_k$ are random
+If $Y_1, \ldots, Y_k$ are random
 variables, we write $\E[X \mid Y_1, \ldots, Y_k] \eqdef
 \E[X \mid \sigma(Y_1, \ldots, Y_k)]$.
 
@@ -1554,15 +1466,13 @@ variables, we write $\E[X \mid Y_1, \ldots, Y_k] \eqdef
 
 The property $\E_\Q[\widetilde S_T] = \widetilde S_0$
 (eq.~\eqref{eq:martingala_uniperiodo}) that characterized the
-risk-neutral measure of the one-period model admits a natural
-generalization: the concept of \emph{martingale}.
+risk-neutral measure of the one-period model generalizes naturally
+through the concept of \emph{martingale}.
 
-\medskip
-
-\noindent\textbf{Definition and first properties.} We work on a
+We work on a
 filtered probability space $(\Omega, \F, (\F_k), \PP)$.
 
-\begin{definicion}[Martingale]
+\begin{definicion}
 \label{def:martingala}
 A process $(M_k)_{k=0}^{N}$ adapted to $(\F_k)$ is a
 \emph{martingale} with respect to $\PP$ if:
@@ -1573,7 +1483,7 @@ A process $(M_k)_{k=0}^{N}$ adapted to $(\F_k)$ is a
 \end{enumerate}
 \end{definicion}
 
-Condition (ii) can be read as follows: the best prediction of the
+Condition (ii) says that the best prediction of the
 value of the process at time $k+1$, given the information up to $k$,
 is the current value $M_k$. A martingale is an ``unbiased'' process.
 Iterating (ii) and applying the tower property, for
@@ -1590,9 +1500,6 @@ The martingale property depends on the measure: replacing $\PP$ by a
 suitable measure $\Q$ will turn the discounted price of the underlying
 into a martingale.
 
-\medskip
-
-\noindent\textbf{The risk-neutral measure in the multi-period model.}
 The no-arbitrage condition becomes, taking $\delta t = T/N$,
 \begin{equation}\label{eq:cond_noarb_multi}
   d < e^{r \delta t} < u,
@@ -1612,9 +1519,7 @@ move in each. Since $q \in (0, 1)$ and $p \in (0, 1)$, the measures
 $\Q$ and $\PP$ assign strictly positive probability to the same paths,
 that is, $\Q \sim \PP$.
 
-\medskip
-
-\noindent\textbf{The discounted price as a martingale under $\Q$.} Let
+Let
 $\widetilde S_k \eqdef e^{-r\, t_k}\, S_k$ be the discounted price.
 
 \begin{teorema}[Martingale property of the discounted price]
@@ -1655,7 +1560,7 @@ Subsection~\ref{subsec:representacion_binomial}.
 
 \medskip
 
-\begin{definicion}[Predictable process]
+\begin{definicion}
 \label{def:predecible}
 A process $(H_k)_{k=1}^{N}$ is \emph{predictable} with respect to the
 filtration $(\F_k)$ if, for each $k = 1, \ldots, N$, $H_k$ is
@@ -1673,7 +1578,7 @@ the next step. It is this restriction that rules out strategies
 
 \medskip
 
-\begin{definicion}[Discrete stochastic integral]
+\begin{definicion}
 \label{def:integral_discreta}
 Let $(M_k)_{k=0}^{N}$ be adapted and $(H_k)_{k=1}^{N}$ predictable.
 The \emph{discrete stochastic integral} of $H$ with respect to $M$ is
@@ -1685,7 +1590,7 @@ the process
 with $(H \cdot M)_0 \eqdef 0$.
 \end{definicion}
 
-The formula has a suggestive financial reading: if $M_k$ is the price
+The formula has a clear financial reading: if $M_k$ is the price
 of an asset and $H_k$ the quantity held during $(t_{k-1}, t_k]$, then
 $H_k\, (M_k - M_{k-1})$ is the gain generated in that period, and
 $(H \cdot M)_n$ is the total gain up to $t_n$.
@@ -1738,8 +1643,8 @@ expected gain of any predictable strategy on a martingale is zero.
 \subsection{The binomial representation theorem}
 \label{subsec:representacion_binomial}
 
-We close the section with the result that ties the whole theory
-together: the \emph{binomial representation theorem}. It states that
+The result on which the whole theory rests is the
+\emph{binomial representation theorem}. It states that
 every $\Q$-martingale can be written as a discrete stochastic integral
 with respect to the discounted price of the underlying. It is the
 discrete and constructive version of the \emph{Brownian martingale
@@ -1815,9 +1720,6 @@ satisfying~\eqref{eq:representacion_binomial}. Uniqueness is immediate
 from~\eqref{eq:phi_explicito}.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Reading of the integrand.}
 Formula~\eqref{eq:phi_explicito} expresses $\phi_k$ as the ratio of
 the change in $M$ to the change in the discounted price between the
 two children of the atom. If we identify $M$ with the discounted value
@@ -1825,9 +1727,7 @@ of a derivative, $\phi_k$ is the quantity of stock that must be held
 in order to absorb its possible change: it is the \emph{delta} of the
 derivative at each node.
 
-\medskip
-
-\noindent\textbf{Two consequences.} The first is the \emph{uniqueness
+Theorem~\ref{teo:representacion_binomial} has two consequences. The first is the \emph{uniqueness
 of the risk-neutral measure}, anticipated in
 Subsection~\ref{subsec:martingalas_discretas}. Let $\Q'$ be another measure under
 which $(\widetilde S_k)$ is a martingale. For each atom $A$ of
@@ -1858,11 +1758,11 @@ steps.
 \subsection{The three steps toward replication}
 \label{subsec:tres_pasos_discreto}
 
-\noindent\textbf{Self-financing strategies.} The idea is that a
+Informally, a
 self-financing strategy is one in which rebalancing the portfolio
 requires neither injecting nor withdrawing capital from outside.
 
-\begin{definicion}[Self-financing strategy]
+\begin{definicion}
 \label{def:self_financing_discreto}
 A \emph{strategy} in the multi-period binomial model is a pair of
 processes $\bigl((\phi_k), (\psi_k)\bigr)$ predictable with respect to
@@ -1916,9 +1816,7 @@ integral''. In particular, combining it with
 Theorem~\ref{teo:integral_preserva_martingala}, the discounted value
 of every self-financing strategy is a $\Q$-martingale.
 
-\medskip
-
-\noindent\textbf{The three-step recipe.} Let $C_T$ be an
+Let $C_T$ be an
 $\F_N$-measurable random variable (the \emph{payoff} of the
 derivative).
 
@@ -1994,7 +1892,7 @@ time of pricing.
 \subsection{Passage to continuous time}
 \label{subsec:obertura_continuo}
 
-We close the chapter with a look ahead. The multi-period binomial
+The multi-period binomial
 model has an artificial feature: the market is observed only at a
 finite number of equally spaced times. This subsection argues, in a
 deliberately heuristic way, that the progressive refinement of the
@@ -2005,9 +1903,7 @@ construction of this model, as well as the associated pricing formula
 (the Black-Scholes formula), will be the subject of the following
 chapters.
 
-\medskip
-
-\noindent\textbf{Calibration of the factors $u$ and $d$.} If we took
+If we took
 $u, d$ constant (independent of $\delta t$), the price paths would
 become dramatically erratic as $N$ increases. A sensible choice
 requires the log-returns at each step to be compatible with a stable
@@ -2025,9 +1921,7 @@ $+\sigma\sqrt{\delta t}$ with probability $p$ and
 $-\sigma\sqrt{\delta t}$ with probability $1-p$. Its expectation is
 $\nu\, \delta t$ and its variance $\sigma^2\, \delta t + O(\delta t^2)$.
 
-\medskip
-
-\noindent\textbf{Convergence to geometric Brownian motion.} We have
+With this calibration, we can write
 \begin{equation*}
   S_N = S_0\, \exp\!\left(\sum_{k=1}^{N} \log\frac{S_k}{S_{k-1}}\right).
 \end{equation*}
@@ -2064,27 +1958,8 @@ that the drift of the log-price under $\Q$ becomes
 $r - \tfrac{1}{2}\sigma^2$ instead of $\nu$. This \emph{change of
 drift} induced by the change of measure is the discrete and heuristic
 version of the phenomenon that in the continuous setting will give
-rise to \emph{Girsanov's theorem}, one of the central pieces of
+rise to \emph{Girsanov's theorem}, one of the central results of
 Chapter~\ref{cap:itocalculus}.
-
-\medskip
-
-\noindent\textbf{Summary of the chapter.} Starting from the static
-pricing of a \emph{forward} by a replication argument, we have
-progressed to a complete and rigorous formula, in the multi-period
-binomial model, for the price of any European derivative, expressed as
-the discounted expectation of the \emph{payoff} under a risk-neutral
-measure, together with a self-financing strategy that replicates it.
-The final three-step articulation is the scheme that will reappear in
-the continuous setting of Black-Scholes. Each of the mathematical
-concepts introduced (filtrations, conditional expectation,
-martingales, predictable processes, discrete stochastic integral) has
-a continuous-time version that we shall employ in
-Chapter~\ref{cap:itocalculus}. Finally, the introduction given in this
-subsection suggests that the underlying in the continuous setting will
-be a process with independent Gaussian increments and continuous
-paths: \emph{Brownian motion}, to which we devote
-Chapter~\ref{cap:brown}.
 
 % =====================================================================
 %   CHAPTER 3 — BROWNIAN MOTION
@@ -2103,7 +1978,7 @@ return to apply them.
 \subsection{Formal definition of Brownian motion}
 \label{subsec:browniano_def}
 
-\begin{definicion}[Standard Brownian motion]
+\begin{definicion}
 \label{def:browniano}
 A \emph{standard Brownian motion} on a probability space
 $(\Omega, \F, \PP)$ is a family $\{W_t\}_{t \geq 0}$ of real random
@@ -2217,9 +2092,7 @@ The pathwise continuity of Brownian motion might suggest a picture of
 smooth functions; the reality is the opposite: the paths are so
 irregular that they admit a derivative at no point.
 
-\medskip
-
-\noindent\textbf{Heuristic argument.} Suppose, arguing by
+Suppose, arguing by
 contradiction, that the path of a Brownian motion were
 differentiable at some time $t_0$. This would mean that the
 difference quotient
@@ -2256,12 +2129,10 @@ nowhere, a combination that will motivate the construction of the
 We next prove a stronger quantitative property: Brownian paths have,
 with probability one, \emph{unbounded variation} on every interval.
 
-\medskip
-
-\noindent\textbf{Total variation of a function.} Let us first recall
+Let us first recall
 the classical notion.
 
-\begin{definicion}[Total variation]
+\begin{definicion}
 \label{def:variacion_total}
 Let $f : [0, T] \to \R$ be a real function defined on a compact
 interval. The \emph{total variation} of $f$ on $[0, T]$ is
@@ -2281,9 +2152,7 @@ Riemann-Stieltjes integral $\int_0^T g\, df$ is unambiguously defined
 for every continuous integrand $g$. It is precisely this circumstance
 that fails in the case of Brownian motion.
 
-\medskip
-
-\noindent\textbf{Heuristic argument.} Let
+Let
 $\pi_n = \{0 = t_0 < t_1 < \cdots < t_n = T\}$ be the uniform
 partition of $[0, T]$ into $n$ subintervals of length $T/n$. By
 condition (ii) of Definition~\ref{def:browniano}, each increment
@@ -2306,7 +2175,7 @@ function of bounded variation. The reasoning therefore suggests that
 the Brownian path cannot be of bounded variation.
 
 The above argument is heuristic (it proves divergence in expectation,
-not almost surely) but it clearly displays the phenomenon. The
+not almost surely) but it displays the phenomenon well. The
 rigorous proof can be obtained, among other routes, as a corollary of
 the computation of the quadratic variation that we address in the
 next subsection (see the remark at the end of that subsection).
@@ -2318,9 +2187,7 @@ With probability one, the path $t \mapsto W_t(\omega)$ has unbounded
 variation on $[0, T]$, that is, $V_T(W) = \infty$ almost surely.
 \end{teorema}
 
-\medskip
-
-\noindent\textbf{Consequence: the failure of Riemann-Stieltjes.} The
+The
 unbounded variation of the paths has an immediate consequence for the
 possibility of defining integrals against Brownian motion. The
 classical Riemann-Stieltjes construction of $\int_0^T g\, df$ requires
@@ -2339,7 +2206,7 @@ construction is well defined.
 \label{subsec:variacion_cuadratica}
 
 Despite the irregularity of the paths, the \emph{sum of the squares}
-of the increments exhibits a remarkably regular behavior: it converges
+of the increments exhibits a very regular behavior: it converges
 to a finite limit as the partition is refined. This quantity, the
 \emph{quadratic variation}, is the central result of the chapter.
 
@@ -2453,10 +2320,7 @@ which is the $L^2$ convergence stated in
 \eqref{eq:convergencia_var_cuadratica}.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{The heuristic rule $(dW_t)^2 = dt$.}
-Theorem~\ref{teo:variacion_cuadratica} admits a particularly
+Theorem~\ref{teo:variacion_cuadratica} has a particularly
 illuminating informal interpretation. The statement that
 $\sum_k (W_{t_{k+1}} - W_{t_k})^2 \to T$ as the partition is refined
 can be read, formally, as
@@ -2475,10 +2339,7 @@ $dt$, not $dt^2$ as it would be for a smooth function. In classical
 calculus the terms quadratic in $dt$ are negligible; for Brownian
 motion, they are not.
 
-\medskip
-
-\noindent\textbf{Consequence: unbounded variation.} We close the
-section by returning to the claim announced in
+Finally, we return to the claim announced in
 Subsection~\ref{subsec:variacion_no_acotada}: the finite and nonzero
 quadratic variation of Brownian motion implies, with probability one,
 its unbounded variation. The argument is as follows. On any partition
@@ -2498,22 +2359,20 @@ bounded variation.
 \section{The Brownian filtration and continuous martingales}
 \label{sec:filtracion_browniana}
 
-We close the chapter with the filtration associated with Brownian
-motion and the canonical examples of continuous martingales. The
-section is brief: its content is essentially the adaptation to the
-continuous setting of the discrete notions of
-Chapter~\ref{cap:discreto}.
+In this section we adapt to the continuous setting the notions of
+filtration and martingale of Chapter~\ref{cap:discreto}, and present the
+canonical examples of continuous martingales associated with Brownian motion.
 
 \subsection{The Brownian filtration and associated martingales}
 \label{subsec:filtracion_y_martingalas}
 
-\noindent\textbf{The natural filtration of Brownian motion.} The
+The
 filtration (Definition~\ref{def:filtracion}) generalizes to the
 continuous setting by replacing the sequence $(\F_k)_{k=0}^N$ with a
 family $(\F_t)_{t \geq 0}$ having the same monotonicity property
 $\F_s \subseteq \F_t$ for $s \leq t$.
 
-\begin{definicion}[Natural filtration of Brownian motion]
+\begin{definicion}
 \label{def:filtracion_browniana}
 Let $\{W_t\}_{t \geq 0}$ be a standard Brownian motion on
 $(\Omega, \F, \PP)$. The \emph{natural filtration} of $W$ is the
@@ -2541,7 +2400,7 @@ continuous versions of processes such as the Itô integral
 The standard solution consists in passing to a slightly enlarged
 filtration that does satisfy both properties.
 
-\begin{definicion}[Augmented filtration of Brownian motion]
+\begin{definicion}
 \label{def:filtracion_aumentada}
 Let $\mathcal{N} \eqdef \{N \in \F : \PP(N) = 0\}$ be the collection
 of $\PP$-null sets. The \emph{augmented filtration} of Brownian motion
@@ -2577,13 +2436,11 @@ be made explicit again, since for informational purposes both encode
 the same events: any set in $\F_t$ differs from one in $\F_t^W$ by at
 most a $\PP$-null set.
 
-\medskip
-
-\noindent\textbf{Independence of the increments with respect to $(\F_t)$.} For $0 \leq s < t$, the increment $W_t - W_s$ is independent of $\F_s$. Indeed, every event $\{W_{r_1} \in B_1, \ldots, W_{r_k} \in B_k\}$ with $0 \leq r_1 < \cdots < r_k \leq s$ coincides, up to a null set (since $W_0 = 0$ a.s.), with an event determined by the increments $W_{r_1} - W_0, \ldots, W_{r_k} - W_{r_{k-1}}$, which by condition (iii) of Definition~\ref{def:browniano} are independent of $W_t - W_s$. These events form a $\pi$-system that generates $\F_s^W$, and Dynkin's $\pi$-$\lambda$ theorem (see \cite{williams}) extends the independence to $\F_s^W$; since every set in $\F_s$ differs from one in $\F_s^W$ by a null set, it also extends to $\F_s$. For this reason $\{W_t\}$ is called a \emph{Brownian motion with respect to $(\F_t)$}, and it is in this form that condition (iii) will be used from now on.
+For $0 \leq s < t$, the increment $W_t - W_s$ is independent of $\F_s$. Indeed, every event $\{W_{r_1} \in B_1, \ldots, W_{r_k} \in B_k\}$ with $0 \leq r_1 < \cdots < r_k \leq s$ coincides, up to a null set (since $W_0 = 0$ a.s.), with an event determined by the increments $W_{r_1} - W_0, \ldots, W_{r_k} - W_{r_{k-1}}$, which by condition (iii) of Definition~\ref{def:browniano} are independent of $W_t - W_s$. These events form a $\pi$-system that generates $\F_s^W$, and Dynkin's $\pi$-$\lambda$ theorem (see \cite{williams}) extends the independence to $\F_s^W$; since every set in $\F_s$ differs from one in $\F_s^W$ by a null set, it also extends to $\F_s$. For this reason $\{W_t\}$ is called a \emph{Brownian motion with respect to $(\F_t)$}, and it is in this form that condition (iii) will be used from now on.
 
 \medskip
 
-\begin{definicion}[Continuous-time martingale]
+\begin{definicion}
 \label{def:martingala_continua}
 Let $(\Omega, \F, (\F_t)_{t \geq 0}, \PP)$ be a filtered probability
 space. A stochastic process $\{M_t\}_{t \geq 0}$ is a
@@ -2601,9 +2458,7 @@ Definition~\ref{def:martingala}; the elementary properties
 (linearity, expectation constant in time) are preserved, with proofs
 identical to the discrete case.
 
-\medskip
-
-\noindent\textbf{Canonical examples.} We present two continuous
+We present two continuous
 martingales associated with Brownian motion. The filtration
 considered is the Brownian $(\F_t)$ fixed in
 Definition~\ref{def:filtracion_aumentada}.
@@ -2661,9 +2516,7 @@ exponential factor cancels exactly with the last term, so that
 $\E[\mathcal{E}_t^{\lambda} \mid \F_s] = \mathcal{E}_s^{\lambda}$.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Comment on the exponential martingale.} The
+The
 process~\eqref{eq:martingala_exponencial}, also known as the
 \emph{stochastic exponential} of $W$, will play an important role in
 Chapter~\ref{cap:itocalculus}: a generalized version of
@@ -2674,15 +2527,6 @@ Girsanov's theorem. The quadratic form of the exponent,
 $-\tfrac{1}{2}\lambda^2 t$, is no accident: it is exactly the
 correction that makes the exponential have unit expectation and,
 therefore, that preserves the martingale property.
-
-\medskip
-
-Having completed the study of Brownian motion and its associated
-martingales, we are in a position to develop the stochastic calculus
-that will occupy the next chapter. The tools to be introduced there
-(Itô integral, Itô's formula, Girsanov's theorem, Brownian martingale
-representation theorem) rest essentially on the properties studied
-so far.
 
 % =====================================================================
 %   CHAPTER 4 — STOCHASTIC CALCULUS
@@ -2711,7 +2555,7 @@ technical construction.
 \label{sec:motivacion_ito}
 
 Before undertaking the construction of the stochastic integral, it is
-essential to articulate precisely why an \emph{ad hoc} construction is
+essential to explain precisely why an \emph{ad hoc} construction is
 necessary and why the classical integration methods do not suffice.
 The motivation unfolds in three steps: first, showing that the price
 process of the underlying must necessarily exhibit unbounded variation
@@ -2720,10 +2564,7 @@ condition makes the classical Riemann-Stieltjes procedure break down;
 and third, identifying the choice that will lead to the correct
 definition.
 
-\medskip
-
-\noindent\textbf{The price of the underlying cannot have smooth
-paths.} The first observation, anchored in the no-arbitrage
+The first observation, anchored in the no-arbitrage
 principle, is the following: in an arbitrage-free continuous model,
 the paths of the discounted price of the underlying cannot be of
 bounded variation. The argument, which we reproduce following
@@ -2780,9 +2621,7 @@ variation. The Brownian motion introduced in Chapter~\ref{cap:brown},
 far from being a mathematical eccentricity, is exactly the kind of
 process the theory demands.
 
-\medskip
-
-\noindent\textbf{Why Riemann-Stieltjes does not work.} Once we accept
+Once we accept
 that the integrator in an expression of the type
 $\int_0^T \phi_s\, dW_s$ will have unbounded variation, the technical
 problem arises immediately: the classical Riemann-Stieltjes
@@ -2832,9 +2671,7 @@ converges to $T$. The pathology that breaks Riemann-Stieltjes is
 exactly the property that distinguishes Brownian motion from
 classical processes.
 
-\medskip
-
-\noindent\textbf{Itô's choice.} The conclusion of the preceding
+The conclusion of the preceding
 analysis is clear: to construct a well-defined integral
 $\int_0^T \phi_s\, dW_s$, we cannot simply take the limit of the
 partial sums, but must fix a specific convention for the evaluation
@@ -2851,7 +2688,7 @@ second, financial in nature, is that the left endpoint formalizes the
 notion of \emph{predictability}: the quantity of stock held during
 the period $[t_k, t_{k+1})$ is chosen at the beginning of the period,
 at $t = t_k$, before knowing how the market will move during the
-subinterval. It is exactly the same idea we articulated in the
+subinterval. It is exactly the same idea we formulated in the
 discrete case in Section~\ref{subsec:predecibles_int_disc}, now
 carried over to the continuous setting.
 
@@ -2877,10 +2714,10 @@ We begin by defining the class of elementary integrands on which the
 stochastic integral admits a direct definition, free of technical
 difficulties.
 
-\begin{definicion}[Simple predictable process]
+\begin{definicion}
 \label{def:proceso_simple}
 A stochastic process $\phi : [0, T] \times \Omega \to \R$ is
-\emph{simple predictable}—or, for short, \emph{simple}—if there
+\emph{simple predictable} (or, for short, \emph{simple}) if there
 exist a partition $0 = t_0 < t_1 < \cdots < t_n = T$ and random
 variables $\xi_0, \xi_1, \ldots, \xi_{n-1}$ such that:
 \begin{enumerate}[label=\textnormal{(\roman*)}]
@@ -2914,7 +2751,7 @@ increment of Brownian motion.
 
 \medskip
 
-\begin{definicion}[Stochastic integral of a simple process]
+\begin{definicion}
 \label{def:integral_simple}
 Let $\phi \in \mathcal{S}$ be a simple process with the
 representation \eqref{eq:proceso_simple}. Its \emph{stochastic
@@ -2935,9 +2772,7 @@ the beginning of that subinterval. Since the $\xi_i$ are random
 variables, $I(\phi)$ is also a random variable, and by construction
 it is $\F_T$-measurable.
 
-\medskip
-
-\noindent\textbf{Well-definedness and linearity.} Before proceeding,
+Before proceeding,
 it is worth noting that the integral~\eqref{eq:integral_simple} does
 not depend on the particular representation used for $\phi$: refining
 the partition,
@@ -2959,7 +2794,7 @@ the $L^2$ norm of the integral in terms of the integrand.
 
 \medskip
 
-\begin{definicion}[The space $\mathcal{H}^2$]
+\begin{definicion}
 \label{def:H2}
 We denote by $\mathcal{H}^2[0, T]$, or simply $\mathcal{H}^2$ when
 the time horizon is clear from the context, the space of stochastic
@@ -2986,10 +2821,6 @@ measurability in $(t, \omega)$ and, in particular, that the integral
 $\int_0^T \phi_s^2\, ds$ is well defined. For simple processes
 (Definition~\ref{def:proceso_simple}) both conditions hold trivially,
 and therefore $\mathcal{S} \subseteq \mathcal{H}^2$.
-
-\medskip
-
-\noindent\textbf{The isometry.}
 
 \begin{teorema}[Itô isometry for simple processes]
 \label{teo:isometria_ito_simples}
@@ -3028,10 +2859,10 @@ Taking expectations,
 
 \emph{Step 2: vanishing of the cross terms.} Let $j < i$. The
 variables $\xi_j$, $\xi_i$ and $\Delta W_j$ are all
-$\F_{t_i}$-measurable—indeed, $\xi_j$ is $\F_{t_j}$-measurable and
+$\F_{t_i}$-measurable (indeed, $\xi_j$ is $\F_{t_j}$-measurable and
 $\F_{t_j} \subseteq \F_{t_i}$, $\xi_i$ is $\F_{t_i}$-measurable by
 assumption, and $\Delta W_j = W_{t_{j+1}} - W_{t_j}$ is
-$\F_{t_i}$-measurable since $t_{j+1} \leq t_i$. By the property
+$\F_{t_i}$-measurable since $t_{j+1} \leq t_i$). By the property
 ``taking out what is known'' of conditional expectation
 (Proposition~\ref{prop:propiedades_esperanza_cond}, property (iii)),
 \begin{equation*}
@@ -3086,10 +2917,8 @@ same argument of Step 2 to each individual summand:
 $\E[\xi_i\, \Delta W_i] = \E[\xi_i\, \E[\Delta W_i \mid \F_{t_i}]] = 0$.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Comment on the role of predictability.} The
-preceding proof brings out with remarkable clarity the mathematical
+The
+preceding proof brings out with complete clarity the mathematical
 reason why Itô's choice, evaluating the integrand at the left
 endpoint of each subinterval, is the correct one. The decisive step
 is \emph{Step 2}: the vanishing of the cross terms is obtained
@@ -3101,10 +2930,8 @@ increment would no longer hold and the cross terms would no longer
 vanish. The isometry is thus a property specific to the Itô integral,
 not shared by integrals constructed with other conventions.
 
-\medskip
-
-\noindent\textbf{Reading as an isometry.} Identity
-\eqref{eq:isometria_ito_simples} admits a natural geometric reading.
+Identity
+\eqref{eq:isometria_ito_simples} can be read in geometric terms.
 Regarding $\mathcal{S}$ as a subset of the Hilbert space
 $\mathcal{H}^2$ with the norm $\|\cdot\|_{\mathcal{H}^2}$ defined
 in~\eqref{eq:norma_H2}, and $L^2(\Omega, \F_T, \PP)$ as a Hilbert
@@ -3121,10 +2948,6 @@ allows us to extend the integral from $\mathcal{S}$ to $\mathcal{H}^2$
 by the classical density argument: we approximate the integrand by
 simple processes and use the completeness of $L^2(\Omega)$ to pass to
 the limit.
-
-\medskip
-
-\noindent\textbf{Density of simple processes.}
 
 \begin{lema}[Density of $\mathcal{S}$ in $\mathcal{H}^2$]
 \label{lema:densidad_simples}
@@ -3151,9 +2974,6 @@ which are simple processes and converge to $\phi$ in $\mathcal{H}^2$
 by the continuity of translation in $L^2$. The detailed argument can
 be found in \cite{karatzas-shreve}, Section 3.2.
 
-\medskip
-
-\noindent\textbf{Construction of the integral on $\mathcal{H}^2$.}
 Let $\phi \in \mathcal{H}^2$. By Lemma~\ref{lema:densidad_simples}
 there exists a sequence $(\phi^{(n)}) \subset \mathcal{S}$ with
 $\|\phi^{(n)} - \phi\|_{\mathcal{H}^2} \to 0$. In particular,
@@ -3185,7 +3005,7 @@ But the two subsequences $(I(\phi^{(n)}))$ and
 $(I(\widetilde{\phi}^{(n)}))$ must converge to that same limit, which
 forces $L = \widetilde{L}$ almost surely.
 
-\begin{definicion}[Stochastic integral on $\mathcal{H}^2$]
+\begin{definicion}
 \label{def:integral_H2}
 Let $\phi \in \mathcal{H}^2$ and let $(\phi^{(n)}) \subset \mathcal{S}$
 be any sequence of simple processes with
@@ -3269,7 +3089,7 @@ which allows us to apply the integral operator $I$ to it and thus
 obtain a family $\{M_t\}_{t \in [0, T]}$ that we shall study as a
 process indexed by $t$.
 
-\begin{definicion}[Indefinite integral]
+\begin{definicion}
 \label{def:integral_indefinida}
 Let $\phi \in \mathcal{H}^2$. For each $t \in [0, T]$, we define
 \begin{equation}\label{eq:def_integral_indefinida}
@@ -3286,16 +3106,14 @@ of the previous subsection. Likewise,
 $M_0 = I(\phi\, \mathbf{1}_{\{0\}}) = 0$ almost surely, since the
 process $\phi\, \mathbf{1}_{\{0\}}$ has zero $\mathcal{H}^2$ norm.
 
-\medskip
-
-\noindent\textbf{Continuity of the paths.} As we have constructed the
+As we have constructed the
 process, each $M_t$ is defined as an element of $L^2(\Omega)$, that
 is, up to modifications on sets of measure zero. This form of
 definition does not by itself guarantee that the paths
 $t \mapsto M_t(\omega)$ are continuous functions: the family
 $\{M_t\}_{t \in [0, T]}$ is indexed by a continuous parameter, and
 the uncountable union of the null sets associated with each $M_t$
-might, \emph{a priori}, fail to be a null set. It is therefore
+might, in principle, fail to be a null set. It is therefore
 necessary to verify the existence of a continuous \emph{version} of
 the process, that is, a choice of representatives in each equivalence
 class that yields continuous paths almost surely.
@@ -3320,10 +3138,6 @@ Section 3.2.
 
 From here on, we shall always identify $\{M_t\}$ with its continuous
 version, without explicit mention.
-
-\medskip
-
-\noindent\textbf{The martingale property.}
 
 \begin{teorema}[Martingale property of the indefinite integral]
 \label{teo:martingala_integral_indefinida}
@@ -3353,8 +3167,8 @@ where the middle equality uses the Itô isometry.
 with the case of a simple process $\phi \in \mathcal{S}$ with
 representation $\phi_r = \sum_i \xi_i\, \mathbf{1}_{(t_i, t_{i+1}]}(r)$.
 Taking a refinement of the partition that includes the points $s$ and
-$t$—which alters neither the process $\phi$ nor the indefinite
-integral—we may assume without loss of generality that $s = t_p$
+$t$, which alters neither the process $\phi$ nor the indefinite
+integral, we may assume without loss of generality that $s = t_p$
 and $t = t_q$ for some $p \leq q$. Then
 \begin{equation*}
   M_t - M_s = \int_s^t \phi_r\, dW_r
@@ -3394,15 +3208,13 @@ $\E[M_t^{(n)} \mid \F_s] = M_s^{(n)}$ almost surely. Taking the limit
 in $L^2(\Omega)$ as $n \to \infty$, $M_t^{(n)} \to M_t$ and
 $M_s^{(n)} \to M_s$ by the isometry applied to the restrictions to
 $[0, t]$ and $[0, s]$ respectively. Since conditional expectation
-with respect to $\F_s$ is a continuous operator on $L^2$—it is the
-orthogonal projection onto the subspace $L^2(\Omega, \F_s, \PP)$—the
+with respect to $\F_s$ is a continuous operator on $L^2$ (it is the
+orthogonal projection onto the subspace $L^2(\Omega, \F_s, \PP)$), the
 equality passes to the limit: $\E[M_t \mid \F_s] = M_s$ almost
 surely.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{The isometry in process form.} As an immediate
+As an immediate
 consequence of the construction, the Itô isometry generalizes to the
 indefinite process: for all $t \in [0, T]$,
 \begin{equation}\label{eq:isometria_proceso}
@@ -3416,12 +3228,12 @@ $\phi\, \mathbf{1}_{[0, t]} \in \mathcal{H}^2$.
 
 This section develops \emph{Itô's formula}, the continuous-time
 substitute for the classical chain rule and, together with Girsanov's
-theorem, one of the fundamental pieces of Chapter~\ref{cap:bs}.
+theorem, one of the fundamental tools of Chapter~\ref{cap:bs}.
 
 \subsection{Itô processes and Itô's formula for $f(W_t)$}
 \label{subsec:procesos_ito_y_formula}
 
-\begin{definicion}[Itô process]
+\begin{definicion}
 \label{def:proceso_ito}
 A stochastic process $\{X_t\}_{t \in [0, T]}$ is an \emph{Itô
 process} if it admits a representation of the form
@@ -3446,9 +3258,7 @@ sense of Theorem~\ref{teo:propiedades_integral_H2}, while the
 condition on $a$ ensures that the integral $\int_0^t a_s\, ds$ is
 well defined pathwise as a Lebesgue integral.
 
-\medskip
-
-\noindent\textbf{Differential notation.} The integral
+The integral
 equality~\eqref{eq:def_proceso_ito} is usually written, in
 abbreviated form, as
 \begin{equation}\label{eq:notacion_diferencial}
@@ -3461,17 +3271,11 @@ its own: it is nothing more than a compact way of expressing
 form~\eqref{eq:notacion_diferencial} must always be understood as
 shorthand for the corresponding integral identities.
 
-\medskip
-
-\noindent\textbf{Integral with respect to an Itô process.} Let $X$ be an Itô process with representation~\eqref{eq:def_proceso_ito} and let $\phi$ be a progressively measurable process such that $\int_0^T |\phi_s\, a_s|\, ds < \infty$ almost surely and $\phi\, b \in \mathcal{H}^2[0, T]$. We define
+Let $X$ be an Itô process with representation~\eqref{eq:def_proceso_ito} and let $\phi$ be a progressively measurable process such that $\int_0^T |\phi_s\, a_s|\, ds < \infty$ almost surely and $\phi\, b \in \mathcal{H}^2[0, T]$. We define
 \begin{equation*}
   \int_0^t \phi_s\, dX_s \eqdef \int_0^t \phi_s\, a_s\, ds + \int_0^t \phi_s\, b_s\, dW_s, \qquad t \in [0, T],
 \end{equation*}
 which in differential notation is written $\phi_t\, dX_t = \phi_t\, a_t\, dt + \phi_t\, b_t\, dW_t$ (see \cite[§4.2]{etheridge}). The definition does not depend on the representation of $X$, since the coefficients of an Itô process are unique: if $\int_0^t (a_s - a'_s)\, ds = \int_0^t (b'_s - b_s)\, dW_s$ for all $t$, the right-hand side is a continuous square-integrable martingale (Theorem~\ref{teo:martingala_integral_indefinida}) with paths of bounded variation, hence identically zero \cite[Lemma~4.2.11]{etheridge}; Itô's isometry then gives $b = b'$ and, consequently, $a = a'$, for almost every $(t, \omega)$. Moreover, for a simple $\phi = \sum_i \xi_i\, \mathbf{1}_{(t_i, t_{i+1}]}$, the integral is the sum $\sum_i \xi_i\, (X_{t_{i+1}} - X_{t_i})$: the accumulated gain from holding $\phi$ units of $X$, as in the discrete stochastic integral~\eqref{eq:integral_discreta}.
-
-\medskip
-
-\noindent\textbf{Statement of Itô's formula.}
 
 \begin{teorema}[Itô's formula for $f(W_t)$]
 \label{teo:formula_ito_brown}
@@ -3487,7 +3291,7 @@ Equivalently, in differential notation,
 \end{equation*}
 \end{teorema}
 
-\noindent\textbf{Reading of the result.} The differential of $f(W_t)$
+The differential of $f(W_t)$
 is the sum of a term in $dW_t$, analogous to that of the classical
 chain rule, and an extra term in $dt$, the \emph{Itô term}, absent in
 ordinary calculus. This correction is a consequence of the heuristic
@@ -3670,9 +3474,7 @@ variable, now with an additional first-order term in the time
 variable. The identification of the limits is entirely analogous; the
 details can be found in \cite{karatzas-shreve}, Section 3.3.
 
-\medskip
-
-\noindent\textbf{Itô's mnemonic rules.} The structure
+The structure
 of~\eqref{eq:formula_ito_general} is easily memorized by operating
 with $dX_t = a_t\, dt + b_t\, dW_t$ as with an ordinary differential
 object, except for the multiplication rules
@@ -3685,9 +3487,7 @@ Theorem~\ref{teo:variacion_cuadratica}. Applying a formal Taylor
 expansion to $f(t, X_t)$ and using these rules to discard negligible
 terms, one recovers exactly \eqref{eq:formula_ito_general}.
 
-\medskip
-
-\noindent\textbf{Three examples.} We illustrate the use of the
+We illustrate the use of the
 formula with three examples that will reappear later on.
 
 \medskip
@@ -3810,7 +3610,7 @@ Radon-Nikodym derivative in the continuous setting.
 
 \medskip
 
-\begin{definicion}[Equivalent measures]
+\begin{definicion}
 \label{def:medidas_equivalentes}
 Two probability measures $\PP$ and $\Q$ on a measurable space
 $(\Omega, \F)$ are said to be \emph{equivalent}, written
@@ -3825,10 +3625,6 @@ shall need: two equivalent measures assign zero probability to
 exactly the same events, although they may weigh the remaining ones
 differently. In particular, statements of the type ``almost surely''
 are interchangeable between the two.
-
-\medskip
-
-\noindent\textbf{Radon-Nikodym derivative.}
 
 \begin{teorema}[Radon-Nikodym, equivalent version]
 \label{teo:radon_nikodym}
@@ -3867,9 +3663,7 @@ rare events (see \cite{glasserman}, Section 4.6). Girsanov's theorem, which we a
 version of this method tailored to Brownian motion.
 \end{observacion}
 
-\medskip
-
-\noindent\textbf{The filtered case: the density as a process.} In
+In
 the setting of interest to us, recall that $(\Omega, \F)$ is
 moreover endowed with a filtration $(\F_t)_{t \in [0, T]}$, the
 augmented Brownian filtration. If $\PP$ and $\Q$ are equivalent on
@@ -3907,10 +3701,7 @@ By the uniqueness of conditional expectation
 $\E_\PP[L_t \mid \F_s] = L_s$ almost surely.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Construction of equivalent measures via exponential
-martingales.} We shall follow the reverse path: given a positive
+We shall follow the reverse path: given a positive
 $\PP$-martingale $\{L_t\}$ with $\E_\PP[L_T] = 1$, we can
 \emph{define} a new measure $\Q$ on $(\Omega, \F_T)$ by
 \begin{equation}\label{eq:def_Q_continuo}
@@ -3940,9 +3731,7 @@ $\theta\, L \in \mathcal{H}^2$, then $\{L_t\}$ is a $\PP$-martingale.
 And in that case $\E_\PP[L_T] = \E_\PP[L_0] = 1$, as required
 by~\eqref{eq:def_Q_continuo}.
 
-\medskip
-
-\noindent\textbf{Novikov's condition.} The condition
+The condition
 $\theta\, L \in \mathcal{H}^2$ is delicate to verify in practice,
 since it involves the very process $L$ we are defining. There is a
 more manageable standard criterion, known as \emph{Novikov's
@@ -3970,8 +3759,6 @@ Novikov's condition will be trivially satisfied.
 \subsection{Girsanov's theorem}
 \label{subsec:girsanov_teorema}
 
-\noindent\textbf{Lévy's characterization.}
-
 \begin{teorema}[Lévy's characterization of Brownian motion]
 \label{teo:caracterizacion_levy}
 Let $\{X_t\}_{t \in [0, T]}$ be a continuous stochastic process
@@ -3992,11 +3779,6 @@ Condition (ii) is equivalent, for continuous martingales, to
 $[X]_t = t$. The characterization therefore says: a continuous
 martingale with $X_0 = 0$ and quadratic variation $t$ is necessarily
 a Brownian motion.
-
-\medskip
-
-\noindent\textbf{Girsanov's theorem.} We turn to the statement of the
-central result.
 
 \begin{teorema}[Girsanov]
 \label{teo:girsanov}
@@ -4139,9 +3921,7 @@ characterization (Theorem~\ref{teo:caracterizacion_levy}),
 $\widetilde{W}$ is a standard Brownian motion under $\Q$.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Reading of the theorem.} Girsanov's theorem is a
+Girsanov's theorem is a
 result of great interest for the purposes of our work: the change of
 measure encoded by the exponential martingale $\{L_t\}$
 \emph{absorbs the additional drift $\theta_t$ of the process
@@ -4150,9 +3930,7 @@ measure $\Q$, what was a process with drift $\theta_t$ becomes a pure
 Brownian motion. The operation is reversible: applying the theorem
 with $-\theta$ recovers $W$ from $\widetilde{W}$.
 
-\medskip
-
-\noindent\textbf{Reformulation in terms of Itô processes.} The
+The
 practical use of the theorem in Chapter~\ref{cap:bs} will go through
 the following reformulation. Let $\{X_t\}$ be an Itô process with
 dynamics
@@ -4267,9 +4045,6 @@ $L^2(\Omega, \F_T, \PP)$. The uniqueness of the integrand $\phi$
 follows, once again, from the Itô isometry. For a detailed
 exposition we refer to \cite{etheridge}, Section~4.6.
 
-\medskip
-
-\noindent\textbf{Version for martingales.}
 Theorem~\ref{teo:representacion_l2} admits the following general
 formulation, which is the one we shall work with in
 Chapter~\ref{cap:bs}.
@@ -4306,9 +4081,7 @@ Identity~\eqref{eq:representacion_martingalas} is proved. Uniqueness
 follows from the uniqueness in Theorem~\ref{teo:representacion_l2}.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Financial reading of the integrand.} The financial
+The financial
 interpretation of the integrand $\phi$ in
 Theorem~\ref{teo:representacion_martingalas} is entirely analogous to
 that of the discrete case. If $\{M_t\}$ is the martingale associated
@@ -4326,14 +4099,8 @@ constructed explicitly.
 \section{Synthesis: from the binomial model to stochastic calculus}
 \label{sec:sintesis_cap4}
 
-We close the chapter by establishing the correspondence between the
-tools of the binomial model and those of continuous stochastic
-calculus.
-
-\medskip
-
-\noindent\textbf{The correspondence between the two settings.} Each
-of the four pieces of continuous stochastic calculus has its
+Each
+of the four tools of continuous stochastic calculus has its
 counterpart in the discrete case. The \emph{Itô stochastic
 integral}, $\int_0^t \phi_s\, dW_s$, is the continuous version of the
 discrete stochastic integral $(\phi \cdot \widetilde S)_n$
@@ -4369,10 +4136,8 @@ expression: knowing how to construct it will be, in each specific
 problem, an additional question to be settled by means of Itô's
 formula.
 
-\medskip
-
-\noindent\textbf{The three-step recipe, continuous version.} The four
-pieces above are the ingredients with which we shall obtain the
+The four
+tools above are the ingredients with which we shall obtain the
 solution of the pricing problem in the continuous setting. The
 strategy, faithful to the scheme of the discrete binomial model
 (Subsection~\ref{subsec:tres_pasos_discreto}), will follow the same
@@ -4399,12 +4164,6 @@ three steps:
         underlying in the replicating portfolio.
 \end{enumerate}
 
-The structure is the same as in the discrete case: only the technical
-sophistication of the tools changes. Chapter~\ref{cap:bs} applies
-this recipe to geometric Brownian motion as the underlying and
-obtains, as its central result, the Black-Scholes formula for the
-European \emph{call} option.
-
 % =====================================================================
 %   CHAPTER 5 — THE BLACK-SCHOLES MODEL
 % =====================================================================
@@ -4424,7 +4183,7 @@ recovery of the classical PDE.
 \subsection{Market assumptions and dynamics of the underlying}
 \label{subsec:hipotesis_modelo_bs}
 
-\noindent\textbf{The model assumptions.} The Black-Scholes model
+The Black-Scholes model
 describes an idealized market built on the following structural
 assumptions:
 
@@ -4462,9 +4221,7 @@ the specific choice of the dynamics of the underlying, which in the
 discrete case was the multiplicative binomial random walk and in the
 continuous case is the GBM.
 
-\medskip
-
-\noindent\textbf{Explicit form of the underlying.} The SDE
+The SDE
 \eqref{eq:bs_dinamica} admits a closed-form solution whose expression
 we already obtained as Example~2 of
 Section~\ref{subsec:formula_ito_general}: the GBM with SDE
@@ -4483,9 +4240,7 @@ This log-normality property will be the key ingredient in the
 explicit computation of the Black-Scholes formula in
 Section~\ref{sec:formula_bs}.
 
-\medskip
-
-\noindent\textbf{The risk-free bond.} With constant interest rate
+With constant interest rate
 $r$, the price of the risk-free bond evolves deterministically
 according to
 \begin{equation}\label{eq:bs_bono}
@@ -4499,7 +4254,7 @@ bond carries no risk).
 \subsection{Portfolios in continuous time}
 \label{subsec:portfolio_continuo}
 
-\begin{definicion}[Portfolio in continuous time]
+\begin{definicion}
 \label{def:portfolio_continuo}
 A \emph{portfolio} (or \emph{strategy}) on the horizon $[0, T]$ is a
 pair of stochastic processes $(\phi_t, \psi_t)_{t \in [0, T]}$ where:
@@ -4534,7 +4289,7 @@ with the information available before the market moves.
 \subsection{The \emph{self-financing} condition}
 \label{subsec:self_financing_continuo}
 
-The most delicate structural piece of the continuous model is the
+The most delicate point of the continuous model is the
 translation to the continuous setting of the \emph{self-financing}
 condition introduced in the discrete case in
 Section~\ref{subsec:tres_pasos_discreto}. Let us recall its content:
@@ -4561,7 +4316,7 @@ movements, not to injections or withdrawals of capital.
 
 \medskip
 
-\begin{definicion}[\emph{Self-financing} strategy]
+\begin{definicion}
 \label{def:self_financing_continuo}
 A strategy $(\phi_t, \psi_t)_{t \in [0, T]}$ is said to be
 \emph{self-financing} if its value $V_t = \phi_t\, S_t + \psi_t\, B_t$
@@ -4594,9 +4349,7 @@ now in the continuous setting.
 \subsection{Statement of the problem}
 \label{subsec:planteamiento_continuo}
 
-\noindent\textbf{European derivatives.}
-
-\begin{definicion}[European derivative]
+\begin{definicion}
 \label{def:derivado_europeo}
 A \emph{European derivative} with maturity $T$ on the underlying
 $\{S_t\}$ is a contract that pays the holder, at time $t = T$, an
@@ -4610,15 +4363,13 @@ integrability condition
 
 Condition~\eqref{eq:integrabilidad_payoff} guarantees that $h(S_T) \in L^2(\Q)$, which is what the Brownian martingale representation theorem requires when applied under $\Q$ in Section~\ref{subsec:paso3_replicacion}: if $L_T$ is the density of $\Q$ with respect to $\PP$ to be constructed in~\eqref{eq:L_T_BS} and $1/p + 1/q = 1$, Hölder's inequality gives $\E_\Q[h(S_T)^2] = \E_\PP[L_T\, h(S_T)^2] \le \E_\PP[L_T^q]^{1/q}\, \E_\PP[|h(S_T)|^{2p}]^{1/p}$, and $\E_\PP[L_T^q] < \infty$ because $L_T$ is lognormal. The weaker condition $\E_\PP[h(S_T)^2] < \infty$ would not suffice, since $L_T$ is not bounded. For standard \emph{payoffs}, including the European \emph{call} $h(S_T) = (S_T - K)^+$ that we address in Section~\ref{sec:formula_bs}, the condition holds automatically by the log-normality of $S_T$.
 
-\medskip
-
-\noindent\textbf{The pricing problem.} The central problem is to
+The central problem is to
 determine, at each time $t \in [0, T]$, a fair price $V(t, S_t)$ for
 the derivative, that is, a price compatible with the no-arbitrage
 assumption (H4). The procedure to follow, as in the discrete scheme,
 goes through the notion of \emph{replicating strategy}:
 
-\begin{definicion}[Replicating strategy]
+\begin{definicion}
 \label{def:estrategia_replicante}
 A \emph{replicating strategy} for the European derivative $h(S_T)$ is
 a \emph{self-financing} strategy $(\phi_t, \psi_t)_{t \in [0, T]}$
@@ -4647,9 +4398,7 @@ What in the binomial model was an explicit reweighting of the
 probabilities on the paths of the tree is now the change of measure
 established by Girsanov's theorem.}
 
-\medskip
-
-\noindent\textbf{The dynamics of the discounted price.} To set up the
+To set up the
 change of measure, it is convenient first to compute the SDE of the
 discounted price process
 \begin{equation}\label{eq:precio_descontado_def}
@@ -4685,9 +4434,7 @@ the underlying over the risk-free rate) and, therefore,
 $\{\widetilde S_t\}$ is not a martingale under $\PP$. The goal of the
 change of measure is to remove that drift.
 
-\medskip
-
-\noindent\textbf{The choice of $\theta$.} The SDE
+The SDE
 \eqref{eq:sde_S_descontado} fits exactly into the scheme of Girsanov's
 theorem reformulated in terms of Itô processes,
 eq.~\eqref{eq:girsanov_operativo}: we have a process with dynamics
@@ -4708,9 +4455,7 @@ constant in the Black-Scholes model, goes by the classical name of
 Girsanov's theorem requires in order to cancel the drift of the
 discounted price.
 
-\medskip
-
-\noindent\textbf{Verification of Novikov's condition.} Since $\theta$
+Since $\theta$
 is constant, Novikov's condition~\eqref{eq:novikov} holds trivially:
 \begin{equation*}
   \E_\PP\!\left[\exp\!\biggl(\tfrac{1}{2}\int_0^T \theta^2\, ds\biggr)\right]
@@ -4719,9 +4464,7 @@ is constant, Novikov's condition~\eqref{eq:novikov} holds trivially:
 We are therefore in a position to apply Theorem~\ref{teo:girsanov}
 with $\theta_t \equiv \theta$.
 
-\medskip
-
-\noindent\textbf{Application of Girsanov's theorem.} The density
+The density
 process associated with $\theta$ is, according
 to~\eqref{eq:L_t_recordada},
 \begin{equation}\label{eq:L_T_BS}
@@ -4739,9 +4482,6 @@ equivalent to $\PP$, with $d\Q/d\PP = L_T$, and the process
 \end{equation}
 is a standard Brownian motion under $\Q$.
 
-\medskip
-
-\noindent\textbf{Characterization of $\Q$ as a martingale measure.}
 Substituting $dW_t = d\widetilde W_t - \theta\, dt$ into the SDE
 \eqref{eq:sde_S_descontado} of the discounted price:
 \begin{equation*}
@@ -4760,9 +4500,7 @@ Theorem~\ref{teo:martingala_integral_indefinida}, $\{\widetilde S_t\}$
 is a $\Q$-martingale. The measure $\Q$ is accordingly called the
 \emph{equivalent martingale measure} or \emph{risk-neutral measure}.
 
-\medskip
-
-\noindent\textbf{The dynamics of the underlying under $\Q$.} It is
+It is
 also worth making explicit the dynamics of the underlying $S_t$
 itself (undiscounted) under the new measure. Substituting
 $dW_t = d\widetilde W_t - \theta\, dt$ into~\eqref{eq:bs_dinamica},
@@ -4798,9 +4536,7 @@ the recipe, in analogy with the discrete case
 constructing a $\Q$-martingale process associated with the
 \emph{payoff}.
 
-\medskip
-
-\noindent\textbf{Definition of the process.} Let $h(S_T)$ be the
+Let $h(S_T)$ be the
 \emph{payoff} of the derivative. We define the process
 $\{M_t\}_{t \in [0, T]}$ by
 \begin{equation}\label{eq:def_M_continuo}
@@ -4812,16 +4548,10 @@ best estimate, conditional on the information available at time $t$,
 of the discounted value of the terminal \emph{payoff}, computed under
 the risk-neutral measure $\Q$.
 
-\medskip
-
-\noindent\textbf{Well-definedness and square integrability.} By condition~\eqref{eq:integrabilidad_payoff} and Hölder's inequality (see the comment after Definition~\ref{def:derivado_europeo}), $h(S_T) \in L^2(\Q)$.
+By condition~\eqref{eq:integrabilidad_payoff} and Hölder's inequality (see the comment after Definition~\ref{def:derivado_europeo}), $h(S_T) \in L^2(\Q)$.
 Consequently, $M_t \in L^2(\Q)$ for all $t$, a necessary condition
 for applying the Brownian martingale representation theorem in the
 next step.
-
-\medskip
-
-\noindent\textbf{Martingale property.}
 
 \begin{proposicion}[$\{M_t\}$ is a $\Q$-martingale]
 \label{prop:M_es_Q_martingala}
@@ -4852,7 +4582,7 @@ with $\F_s \subseteq \F_t$,
 \subsection{Step 3: representation, replication and \emph{self-financing}}
 \label{subsec:paso3_replicacion}
 
-\noindent\textbf{Application of the representation theorem.} The
+The
 $\Q$-martingale $\{M_t\}$ is adapted to the filtration of the
 Brownian motion $\widetilde W$ since, by~\eqref{eq:W_tilde_BS}, the
 filtration $(\F_t)$ generated by $W$ and augmented with the null sets
@@ -4869,11 +4599,9 @@ now understood with respect to $\Q$) such that
   \qquad t \in [0, T].
 \end{equation}
 
-\medskip
-
-\noindent\textbf{Identification of the portfolio.} The integrand
-$\widetilde\phi_t$ provided by~\eqref{eq:representacion_M} is the
-piece that allows us to construct the replicating strategy. The idea
+The integrand
+$\widetilde\phi_t$ provided by~\eqref{eq:representacion_M} is what
+allows us to construct the replicating strategy. The idea
 is the following: we want to define $(\phi_t, \psi_t)$ so that the
 discounted value of the portfolio, $\widetilde V_t \eqdef e^{-rt}\, V_t$,
 coincides with $M_t$ at every time. To this end, observe that if
@@ -4909,10 +4637,6 @@ strategy would therefore satisfy the replication condition
 (Definition~\ref{def:estrategia_replicante}). Consequently, it
 suffices to verify that $(\phi_t, \psi_t)$ is \emph{self-financing}
 in the sense of Definition~\ref{def:self_financing_continuo}.
-
-\medskip
-
-\noindent\textbf{Verification of the \emph{self-financing} condition.}
 
 \begin{teorema}[The strategy is \emph{self-financing}]
 \label{teo:replicante_self_financing}
@@ -4978,11 +4702,6 @@ coincide term by term. The strategy $(\phi_t, \psi_t)$ is therefore
 \emph{self-financing}.
 \end{proof}
 
-\medskip
-
-\noindent\textbf{The central result.} Combining the three steps, we
-are in a position to state the main result of the section.
-
 \begin{teorema}[Pricing of European derivatives in the Black-Scholes model]
 \label{teo:valoracion_BS}
 Let $h(S_T)$ be a European \emph{payoff} satisfying the integrability
@@ -5011,23 +4730,11 @@ $\F_t$-measurability of the factor $e^{rt}$.
 Uniqueness, among the strategies of Definition~\ref{def:portfolio_continuo}, follows from the uniqueness of the integrand in the representation theorem (Theorem~\ref{teo:representacion_martingalas}). Let $(\phi', \psi')$ be another \emph{self-financing} replicating strategy, with value $V'$ and discounted value $\widetilde V'_t = e^{-rt} V'_t$. The \emph{self-financing} condition gives $d\widetilde V'_t = \phi'_t\, d\widetilde S_t = \phi'_t\, \sigma\, \widetilde S_t\, d\widetilde W_t$ \cite[Lemma~5.1.3]{etheridge}, and since $\phi' S \in \mathcal{H}^2[0, T]$ with respect to $\Q$ (Definition~\ref{def:portfolio_continuo}), also $\phi'\, \sigma\, \widetilde S \in \mathcal{H}^2[0, T]$, so that $\widetilde V'$ is a $\Q$-martingale by Theorem~\ref{teo:martingala_integral_indefinida}. As $\widetilde V'_T = e^{-rT} h(S_T)$, we have $\widetilde V'_t = \E_\Q[e^{-rT}\, h(S_T) \mid \F_t] = M_t$ for all $t$; by the uniqueness of the integrand, $\phi'_t\, \sigma\, \widetilde S_t = \widetilde\phi_t$, that is, $\phi' = \phi$ by~\eqref{eq:phi_BS}, and then $\psi' = \psi$ by~\eqref{eq:psi_BS}. Without the integrability condition of Definition~\ref{def:portfolio_continuo} uniqueness may fail (see the footnote to that definition).
 \end{proof}
 
-\medskip
-
-\noindent\textbf{Reading of the result.}
 Formula~\eqref{eq:formula_valoracion} is the continuous-time
 translation of Theorem~\ref{teo:valoracion_binomial}: the price at
 each time is the conditional expectation, under the risk-neutral
 measure, of the discounted \emph{payoff}.
 
-\medskip
-
-We have thus solved the general pricing problem. Formula
-\eqref{eq:formula_valoracion} expresses, for any European
-\emph{payoff} $h$, the price of the derivative as a conditional
-expectation under $\Q$. The next section specializes this formula to
-the case of the European \emph{call} option, $h(S_T) = (S_T - K)^+$,
-and obtains by direct computation the classical Black-Scholes
-formula.
 \section{The Black-Scholes formula for the European \emph{call} option}
 \label{sec:formula_bs}
 
@@ -5036,9 +4743,7 @@ the \emph{payoff} of the European \emph{call}, $h(S_T) = (S_T - K)^+$,
 thereby obtaining the classical Black-Scholes formula (1973) with its
 coefficients $d_1$ and $d_2$.
 
-\medskip
-
-\noindent\textbf{The European \emph{call} option.} Let us briefly
+Let us briefly
 recall the contract. The European \emph{call} option with
 \emph{strike} $K > 0$ and maturity $T$ is the European derivative
 whose \emph{payoff} at $T$ is
@@ -5054,9 +4759,7 @@ automatically for this \emph{payoff} since
 $0 \leq (S_T - K)^+ \leq S_T$ and the moments of the GBM are finite
 of all orders, so that Theorem~\ref{teo:valoracion_BS} applies.
 
-\medskip
-
-\noindent\textbf{Strategy of the computation.} We shall first
+We shall first
 compute the price of the \emph{call} at $t = 0$, that is,
 $V(0, S_0) = \E_\Q[e^{-rT}\, (S_T - K)^+]$, and at the end obtain the
 generalization to the case $t > 0$ by an argument based on the Markov
@@ -5070,7 +4773,6 @@ function:
    - K\, \underbrace{\Q(S_T > K)}_{(\mathrm{II})}.
 \end{equation}
 
-\noindent\textbf{Expression of $S_T$ under $\Q$.}
 By~\eqref{eq:S_explicito_Q} with $t = T$,
 \begin{equation}\label{eq:S_T_Q}
   S_T = S_0\, \exp\!\left(\Bigl(r - \tfrac{1}{2}\sigma^2\Bigr) T
@@ -5095,15 +4797,13 @@ that is, $Z > -d_2$, where
                   {\sigma\, \sqrt{T}}.
 \end{equation}
 
-\noindent\textbf{Computation of the term $(\mathrm{II})$.} By the
+By the
 symmetry of the Gaussian distribution,
 $(\mathrm{II}) = \Q(Z > -d_2) = N(d_2)$, where
 $N(x) \eqdef (2\pi)^{-1/2} \int_{-\infty}^x e^{-y^2/2}\, dy$ is the
 standard normal distribution function.
 
-\medskip
-
-\noindent\textbf{Computation of the term $(\mathrm{I})$.} We have
+For the term $(\mathrm{I})$, we have
 \begin{equation*}
   (\mathrm{I}) = \E_\Q\bigl[S_T\, \mathbf{1}_{\{Z > -d_2\}}\bigr]
               = S_0\, e^{(r - \frac{1}{2}\sigma^2) T}\,
@@ -5148,9 +4848,7 @@ $S_T$, leaving
   (\mathrm{I}) = S_0\, e^{rT}\, N(d_1).
 \end{equation}
 
-\medskip
-
-\noindent\textbf{The Black-Scholes formula.} Substituting
+Substituting
 $(\mathrm{I})$ and $(\mathrm{II})$ into~\eqref{eq:descomposicion_call}
 and multiplying by the discount factor $e^{-rT}$, we obtain the
 central formula:
@@ -5176,9 +4874,7 @@ where
 and $N(\cdot)$ is the standard normal distribution function.
 \end{teorema}
 
-\medskip
-
-\noindent\textbf{Generalization to the case $t > 0$.} Formula
+Formula
 \eqref{eq:formula_BS} has been derived at $t = 0$. The
 generalization to the case $t \in (0, T)$ is obtained by taking into
 account the following observation: the process $\{S_t\}$ under $\Q$
@@ -5211,11 +4907,6 @@ in the next section when deriving the Black-Scholes PDE.
 \section{The Black-Scholes PDE}
 \label{sec:edp_bs}
 
-We close the chapter with the derivation of the classical
-Black-Scholes PDE from the martingale calculus.
-
-\medskip
-
 The derivation we have carried out in the preceding sections (via
 change of measure, construction of the $\Q$-martingale associated
 with the \emph{payoff}, and application of the representation
@@ -5226,9 +4917,7 @@ to a partial differential equation. This section recovers this
 second formulation from formula~\eqref{eq:formula_BS_t}, showing the
 consistency between the two routes.
 
-\medskip
-
-\noindent\textbf{Application of Itô to the value function.} The
+The
 value function of the European \emph{call}, $V(t, S_t)$, given
 by~\eqref{eq:formula_BS_t}, is of class $C^{1,2}$ on the domain
 $[0, T) \times (0, \infty)$. We apply Itô's formula
@@ -5241,10 +4930,7 @@ an Itô process under $\Q$ with dynamics~\eqref{eq:S_dinamica_Q}:
    + \sigma\, S_t\, \partial_S V\, d\widetilde W_t.
 \end{equation}
 
-\medskip
-
-\noindent\textbf{Comparison with the dynamics of the replicating
-portfolio.} On the other hand, in
+On the other hand, in
 Subsection~\ref{subsec:paso3_replicacion} we proved that the value
 of the replicating portfolio satisfies (combining
 \eqref{eq:dV_calculado} and the identification \eqref{eq:phi_BS}):
@@ -5294,9 +4980,7 @@ of this boundary value problem; a uniqueness argument shows that it
 is in fact the unique sufficiently regular solution (see
 \cite{karatzas-shreve}, Section 5.8).
 
-\medskip
-
-\noindent\textbf{The connection via Feynman-Kac.} The equivalence
+The equivalence
 between the two derivation routes, martingales and PDE, can be
 expressed abstractly through the \emph{Feynman-Kac formula}, which
 establishes the identity between the solution of the
