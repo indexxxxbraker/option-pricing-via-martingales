@@ -4,9 +4,11 @@
 
 Bachelor's thesis in Mathematics — University of Oviedo, Faculty of Science. Written January–May 2026; deposit and defence expected in May 2027 (see [Status of the thesis](#status-of-the-thesis)).
 
-[![PDF (English)](https://img.shields.io/badge/PDF-English-blue.svg)](en/thesis_en.pdf)
-[![PDF (Español)](https://img.shields.io/badge/PDF-Espa%C3%B1ol-blue.svg)](es/tfg_es.pdf)
+[![PDF (Spanish original)](https://img.shields.io/badge/PDF-Original%20%28Espa%C3%B1ol%29-blue.svg)](es/tfg_es.pdf)
+[![PDF (English translation)](https://img.shields.io/badge/PDF-English%20translation-blue.svg)](en/thesis_en.pdf)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSE)
+
+*The thesis was written in Spanish, which is the reference version. The English version is a translation made with Claude (Anthropic) and revised in full by me (see [On the English translation](#on-the-english-translation)).*
 
 ## About this work
 
@@ -18,7 +20,7 @@ The thesis is a self-contained, rigorous development of the theory of European o
 
 The thesis is complete. I wrote it between January and May 2026, during my Erasmus+ year at Sapienza University of Rome, a year earlier than planned, and the full text is available here in Spanish and in English. It will be deposited and defended at the University of Oviedo in May 2027.
 
-Until the official deposit, I keep revising the text: corrections, clarifications and fuller justifications of some steps, without changing its scope. The sources and PDFs in this repository are updated as these revisions are made, and each one is recorded in the commit history. The version deposited with the University will be the official one, and it will be published here after the defence.
+Until the official deposit, I keep revising the text: corrections, clarifications and fuller justifications of some steps, among them Itô's formula for general Itô processes and Girsanov's theorem under Novikov's condition alone, as far as the length of the thesis allows, without changing its scope. The sources and PDFs in this repository are updated as these revisions are made, and each one is recorded in the commit history. The version deposited with the University will be the official one, and it will be published here after the defence.
 
 ## Abstract
 
@@ -33,7 +35,7 @@ This work develops, in a self-contained and mathematically rigorous manner, the 
 | 1. Introduction | Motivation, historical context, objectives, sources and own contribution, structure. |
 | 2. Option pricing in discrete time | No-arbitrage principle and replication; the forward as a warm-up; one-period binary model, emergence of the risk-neutral measure, trinomial model and incompleteness; multi-period binomial model with the full probabilistic machinery (filtrations, conditional expectation, discrete-time martingales, predictable processes, discrete stochastic integral, binomial representation theorem); the three-step pricing recipe; heuristic passage to continuous time. |
 | 3. Brownian motion | Definition and existence; nowhere differentiability, unbounded variation and quadratic variation of the paths (with full proof); the augmented Brownian filtration and continuous martingales. |
-| 4. Stochastic calculus | Why a new integral is needed (a no-arbitrage argument); construction of the Itô integral on simple processes, the Itô isometry, extension to $\mathcal{H}^2$ by density, the indefinite integral as a continuous martingale; Itô's formula (with proof for $f(W_t)$); change of measure, Novikov's condition and Girsanov's theorem (with proof via Lévy's characterization); the Brownian martingale representation theorem; synthesis of the discrete–continuous correspondence. |
+| 4. Stochastic calculus | Why a new integral is needed (a no-arbitrage argument); construction of the Itô integral for simple processes; the Itô isometry and extension to $\mathcal{H}^2$ by density; the indefinite integral as a continuous martingale; Itô's formula, with proof for $f(W_t)$; change of measure and Novikov's condition; Girsanov's theorem, with proof via Lévy's characterization; the Brownian martingale representation theorem; and a synthesis of the discrete–continuous correspondence. Itô's formula for general Itô processes and Girsanov's theorem under Novikov's condition alone are planned for the final version (May 2027). |
 | 5. The Black-Scholes model | Market assumptions, portfolios and the self-financing condition in continuous time; the three-step recipe in the continuous setting (Girsanov, the $\mathbb{Q}$-martingale of the discounted payoff, representation and replication); the Black-Scholes formula for the European call; derivation of the Black-Scholes PDE and the Feynman–Kac connection. |
 | 6. Conclusions | Summary, convergence of the binomial formula to Black-Scholes, reflection on the approach, further directions. |
 
@@ -68,13 +70,15 @@ Both versions compile with `pdflatex` on a standard TeX Live or MiKTeX installat
 
 ## On the English translation
 
-The thesis was written in Spanish and will be defended in Spanish. The English version was produced by the author with the assistance of AI translation tools (Anthropic's Claude) and then revised in full by the author. Both versions are revised together, so their mathematical content, structure and numbering of results remain identical; the Spanish text is the reference version, and any remaining infelicities in the English are the author's responsibility.
+The thesis was written in Spanish and will be defended in Spanish. The English version was translated from the Spanish original with Claude (Anthropic) and then revised in full by the author. Both versions are revised together, so their mathematical content, structure and numbering of results remain identical; the Spanish text is the reference version, and any remaining infelicities in the English are the author's responsibility.
 
 ## Continuation of this work
 
 The natural next step after this thesis is to move from theory to numerical practice and beyond the Black-Scholes assumptions. That is the purpose of my companion repository [**quant-finance-portfolio**](https://github.com/indexxxxbraker/quant-finance-portfolio): a derivative pricing library implemented in parallel in Python and C++, covering analytical Black-Scholes pricing and Greeks, Monte Carlo methods with variance reduction and quasi-Monte Carlo, finite-difference PDE schemes and lattices, and the Heston stochastic volatility model with Fourier, Monte Carlo (Andersen QE) and ADI-PDE pricers, calibration, and exotic options; each method cross-validated against independent ones.
 
 This academic year the work continues in two further directions at the University of Oviedo: a research-collaboration grant from the Spanish Ministry of Education (*Beca de Colaboración*, November 2026 – May 2027), supervised by José Santos Domínguez Menchero, on generic change-of-measure pricing algorithms and the extension to fractional Brownian motion; and my bachelor's thesis in Physics, [*Path Integrals in the Pricing of Path-Dependent Options*](https://github.com/indexxxxbraker/path-integral-option-pricing) (in progress), which looks for a single path-integral framework for Asian, barrier and lookback options.
+
+As preparation for the grant, I developed [*girsanov-importance-sampling*](https://github.com/indexxxxbraker/girsanov-importance-sampling), which turns the change of measure of Theorem 4.20 into a variance reduction method: importance sampling by a Girsanov drift for out-of-the-money options under Black–Scholes.
 
 ## Main references
 
